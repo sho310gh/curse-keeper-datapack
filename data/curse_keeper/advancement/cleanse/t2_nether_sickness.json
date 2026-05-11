@@ -1,0 +1,15 @@
+{
+  "criteria": {
+    "trigger": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "location": {
+          "structure": "minecraft:fortress"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "curse_keeper:cleanse/nether_sickness"
+  }
+}
