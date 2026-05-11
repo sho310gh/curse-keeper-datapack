@@ -26,11 +26,13 @@ tag @s remove ck.curse_2
 tag @s remove ck.curse_3
 tag @s remove ck.curse_4
 tag @s remove ck.curse_5
+tag @s remove ck.curse_6
 scoreboard players set @s ck.curse_id 0
 
 # Clean up enforcement side effects
 effect clear @s minecraft:hunger
 attribute @s minecraft:max_health base set 20
+execute as @s run attribute @s minecraft:movement_speed base set 0.1
 
 # Start cooldown
 function curse_keeper:util/start_cooldown

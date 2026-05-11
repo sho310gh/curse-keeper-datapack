@@ -65,4 +65,13 @@ Curses affect players in different ways depending on which curse they receive. C
 
 ---
 
+### Curse List
+
+- **Bloodless** — No natural health regeneration & Hunger
+- **Bone Debt** — Reduces max health by 5 hearts
+- **Ender Blockade** — Blocked from entering the end
+- **Frail Vessel** — Reduces max health by 5 hearts
+- **Nether Sickness** — Taking 1 Heart damage every 15 sec in the Nether
+- **Sluggish** — Walking Speed reduce by 30%
+
 *More curses and features are planned for future versions.*

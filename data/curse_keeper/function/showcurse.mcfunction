@@ -43,6 +43,11 @@ execute if entity @s[tag=ck.curse_5] run tellraw @s [{"text":"Curse: ","color":"
 execute if entity @s[tag=ck.curse_5] run tellraw @s [{"text":"Restriction: ","color":"gray"},{"text":"Cannot enter the End dimension.","color":"white"}]
 execute if entity @s[tag=ck.curse_5] run tellraw @s [{"text":"Cleanse: ","color":"gray"},{"text":"Kill 10 Ravagers — ","color":"green"},{"score":{"name":"@s","objective":"ck.kill_ravager"},"color":"yellow"},{"text":"/10","color":"gray"}]
 
+# Sluggish
+execute if entity @s[tag=ck.curse_6] run tellraw @s [{"text":"Curse: ","color":"gray"},{"text":"Sluggish","color":"red","bold":true},{"text":" (Tier 1)","color":"dark_red"}]
+execute if entity @s[tag=ck.curse_6] run tellraw @s [{"text":"Restriction: ","color":"gray"},{"text":"Your movement speed is reduced by 30%.","color":"white"}]
+execute if entity @s[tag=ck.curse_6] run tellraw @s [{"text":"Cleanse: ","color":"gray"},{"text":"Walk 50,000 Blocks — ","color":"green"},{"score":{"name":"@s","objective":"ck.walk_dist"},"color":"yellow"},{"text":"/50,000","color":"gray"}]
+
 # Cooldown status
 execute if entity @s[tag=ck.on_cooldown] run tellraw @s [{"text":"Status: ","color":"gray"},{"text":"On cooldown — waiting for next tier draw.","color":"yellow"}]
 

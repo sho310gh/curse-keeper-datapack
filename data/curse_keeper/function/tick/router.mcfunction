@@ -17,6 +17,7 @@ function curse_keeper:tick/enforce/frail_vessel
 function curse_keeper:tick/enforce/nether_sickness
 function curse_keeper:tick/enforce/bloodless
 function curse_keeper:tick/enforce/ender_blockade
+function curse_keeper:tick/enforce/sluggish
 
 function curse_keeper:tick/cooldown
 function curse_keeper:tick/cleanse_check

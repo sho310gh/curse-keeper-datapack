@@ -11,14 +11,15 @@ execute unless entity @s[tag=ck.tier1] unless entity @s[tag=ck.tier2] unless ent
 
 # Roll a random number into ck.curse_id using loot table random
 # We use the random command introduced in 1.20.2
-# Tier 1 pool: only curse 1 (Bone Debt) — no roll needed
-execute if entity @s[tag=ck.tier1] run scoreboard players set @s ck.curse_id 1
 
-# Tier 2 pool: curse 2 (Frail Vessel) or curse 3 (Nether Sickness) — roll 2-3
+# Tier 1 pool
+execute if entity @s[tag=ck.tier1] run function curse_keeper:curse/roll_tier1
+
+# Tier 2 pool
 execute if entity @s[tag=ck.tier2] run scoreboard players set @s ck.curse_id 2
 execute if entity @s[tag=ck.tier2] run function curse_keeper:curse/roll_tier2
 
-# Tier 3 pool: curse 4 (Bloodless) or curse 5 (Ender Blockade) — roll 4-5
+# Tier 3 pool
 execute if entity @s[tag=ck.tier3] run scoreboard players set @s ck.curse_id 4
 execute if entity @s[tag=ck.tier3] run function curse_keeper:curse/roll_tier3
 
@@ -28,3 +29,4 @@ execute if score @s ck.curse_id matches 2 run function curse_keeper:curse/assign
 execute if score @s ck.curse_id matches 3 run function curse_keeper:curse/assign/nether_sickness
 execute if score @s ck.curse_id matches 4 run function curse_keeper:curse/assign/bloodless
 execute if score @s ck.curse_id matches 5 run function curse_keeper:curse/assign/ender_blockade
+execute if score @s ck.curse_id matches 6 run function curse_keeper:curse/assign/sluggish

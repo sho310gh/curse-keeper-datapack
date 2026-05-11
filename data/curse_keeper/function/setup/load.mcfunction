@@ -16,6 +16,7 @@
 # ck.dev_mode    : Global flag — 1 = dev mode, 0 = prod mode
 # ck.system_on   : Global flag — 1 = curse system active, 0 = inactive
 # ck.admin: Trigger scoreboard for /trigger ck.admin
+# ck.walk_dist : Mirrors walk distance stat for Sluggish tracking (in cm, so 50,000 blocks = 5,000,000)
 
 scoreboard objectives add ck.curse_id dummy
 scoreboard objectives add ck.tier dummy
@@ -29,6 +30,7 @@ scoreboard objectives add ck.system_on dummy
 scoreboard objectives add ck.admin trigger
 scoreboard objectives add ck.showcurse trigger
 scoreboard objectives add ck.kill_ravager minecraft.killed:minecraft.ravager
+scoreboard objectives add ck.walk_dist minecraft.custom:minecraft.walk_one_cm
 
 # --- Global defaults (fake player "#ck" stores global vars) ---
 # Only set if they haven't been set yet (first load)
