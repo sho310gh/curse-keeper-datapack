@@ -48,6 +48,26 @@ execute if entity @s[tag=ck.curse_6] run tellraw @s [{"text":"Curse: ","color":"
 execute if entity @s[tag=ck.curse_6] run tellraw @s [{"text":"Restriction: ","color":"gray"},{"text":"Your movement speed is reduced by 30%.","color":"white"}]
 execute if entity @s[tag=ck.curse_6] run tellraw @s [{"text":"Cleanse: ","color":"gray"},{"text":"Walk 50,000 Blocks — ","color":"green"},{"score":{"name":"@s","objective":"ck.walk_dist"},"color":"yellow"},{"text":"/50,000","color":"gray"}]
 
+# Famished
+execute if entity @s[tag=ck.curse_7] run tellraw @s [{"text":"Curse: ","color":"gray"},{"text":"Famished","color":"red","bold":true},{"text":" (Tier 2)","color":"dark_red"}]
+execute if entity @s[tag=ck.curse_7] run tellraw @s [{"text":"Restriction: ","color":"gray"},{"text":"Saturation is constantly drained, hunger effect applied periodically","color":"white"}]
+execute if entity @s[tag=ck.curse_7] run tellraw @s [{"text":"Cleanse: ","color":"gray"},{"text":"Consume 5 enchanted golden apples.","color":"green"}]
+
+# Villager's Bane
+execute if entity @s[tag=ck.curse_8] run tellraw @s [{"text":"Curse: ","color":"gray"},{"text":"Villager's Bane","color":"red","bold":true},{"text":" (Tier 1)","color":"dark_red"}]
+execute if entity @s[tag=ck.curse_8] run tellraw @s [{"text":"Restriction: ","color":"gray"},{"text":"Being within 5 blocks of a villager applies Poison and Nausea.","color":"white"}]
+execute if entity @s[tag=ck.curse_8] run tellraw @s [{"text":"Cleanse: ","color":"gray"},{"text":"Kill 10 Iron Golems — ","color":"green"},{"score":{"name":"@s","objective":"ck.kill_iron_golem"},"color":"yellow"},{"text":"/10","color":"gray"}]
+
+# Bee Marked
+execute if entity @s[tag=ck.curse_9] run tellraw @s [{"text":"Curse: ","color":"gray"},{"text":"Bee Marked","color":"red","bold":true},{"text":" (Tier 3)","color":"dark_red"}]
+execute if entity @s[tag=ck.curse_9] run tellraw @s [{"text":"Restriction: ","color":"gray"},{"text":"Bees within 16 blocks aggro onto you automatically.","color":"white"}]
+execute if entity @s[tag=ck.curse_9] run tellraw @s [{"text":"Cleanse: ","color":"gray"},{"text":"Consume 100 honey bottles — ","color":"green"},{"score":{"name":"@s","objective":"ck.drink_honey"},"color":"yellow"},{"text":"/100","color":"gray"}]
+
+# Vampirism
+execute if entity @s[tag=ck.curse_10] run tellraw @s [{"text":"Curse: ","color":"gray"},{"text":"Vampirism","color":"red","bold":true},{"text":" (Tier 2)","color":"dark_red"}]
+execute if entity @s[tag=ck.curse_10] run tellraw @s [{"text":"Restriction: ","color":"gray"},{"text":"Standing exposed under the sun in the Overworld sets you on fire.","color":"white"}]
+execute if entity @s[tag=ck.curse_10] run tellraw @s [{"text":"Cleanse: ","color":"gray"},{"text":"Kill 50 Phantoms — ","color":"green"},{"score":{"name":"@s","objective":"ck.kill_phantom"},"color":"yellow"},{"text":"/50 | Drink 20 Milk Buckets — ","color":"gray"},{"score":{"name":"@s","objective":"ck.drink_milk"},"color":"yellow"},{"text":"/20","color":"gray"}]
+
 # Cooldown status
 execute if entity @s[tag=ck.on_cooldown] run tellraw @s [{"text":"Status: ","color":"gray"},{"text":"On cooldown — waiting for next tier draw.","color":"yellow"}]
 

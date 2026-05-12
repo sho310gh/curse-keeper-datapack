@@ -18,6 +18,10 @@ function curse_keeper:tick/enforce/nether_sickness
 function curse_keeper:tick/enforce/bloodless
 function curse_keeper:tick/enforce/ender_blockade
 function curse_keeper:tick/enforce/sluggish
+function curse_keeper:tick/enforce/famished
+function curse_keeper:tick/enforce/villagers_bane
+function curse_keeper:tick/enforce/bee_marked
+function curse_keeper:tick/enforce/vampirism
 
 function curse_keeper:tick/cooldown
 function curse_keeper:tick/cleanse_check

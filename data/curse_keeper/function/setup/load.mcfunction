@@ -17,6 +17,13 @@
 # ck.system_on   : Global flag — 1 = curse system active, 0 = inactive
 # ck.admin: Trigger scoreboard for /trigger ck.admin
 # ck.walk_dist : Mirrors walk distance stat for Sluggish tracking (in cm, so 50,000 blocks = 5,000,000)
+# ck.eat_ega     : Tracks enchanted golden apples consumed for Famished cleanse
+# ck.hunger_timer: Tracks ticks for periodic hunger effect (Famished enforcement)
+# ck.kill_iron_golem : Tracks iron golem kills for Villager's Bane cleanse
+# ck.drink_honey : Tracks honey bottles consumed for Bee Marked cleanse
+# ck.kill_phantom : Tracks phantom kills for Vampirism cleanse
+# ck.drink_milk   : Tracks milk bucket consumption for Vampirism cleanse
+# ck.vamp_timer   : Stores daytime query result for Vampirism day check
 
 scoreboard objectives add ck.curse_id dummy
 scoreboard objectives add ck.tier dummy
@@ -31,6 +38,14 @@ scoreboard objectives add ck.admin trigger
 scoreboard objectives add ck.showcurse trigger
 scoreboard objectives add ck.kill_ravager minecraft.killed:minecraft.ravager
 scoreboard objectives add ck.walk_dist minecraft.custom:minecraft.walk_one_cm
+scoreboard objectives add ck.eat_ega minecraft.used:minecraft.enchanted_golden_apple
+scoreboard objectives add ck.hunger_timer dummy
+scoreboard objectives add ck.kill_iron_golem minecraft.killed:minecraft.iron_golem
+scoreboard objectives add ck.drink_honey minecraft.used:minecraft.honey_bottle
+scoreboard objectives add ck.kill_phantom minecraft.killed:minecraft.phantom
+scoreboard objectives add ck.drink_milk minecraft.used:minecraft.milk_bucket
+scoreboard objectives add ck.vamp_timer dummy
+
 
 # --- Global defaults (fake player "#ck" stores global vars) ---
 # Only set if they haven't been set yet (first load)
