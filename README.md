@@ -1,7 +1,7 @@
 # ☠ Curse Keeper
-### A Minecraft Java Datapack — Unique Curse System | v1.1.0
+### A Minecraft Java Datapack — Unique Curse System
 
-> **Compatible with Minecraft Java 1.21.x** (pack format 88)
+> **Compatible with Minecraft Java 26.x** (pack format 88)
 
 ---
 
@@ -59,8 +59,8 @@ Curses affect players in different ways depending on which curse they receive. C
 | Curse | Effect | Cleanse |
 |---|---|---|
 | **Bone Debt** | Max health reduced by 5 hearts | Kill 150 Skeletons |
-| **Sluggish** | Movement speed reduced by 30% | Walk 50,000 blocks |
-| **Villager's Bane** | Poison & Nausea applied within 5 blocks of a villager | Kill 10 Iron Golems |
+| **Sluggish** | Movement speed reduced by 30% | Walk 5,000,000 cm |
+| **Villager's Bane** | Poison & Nausea applied within 10 blocks of a villager | Kill 10 Iron Golems |
 
 ### Tier 2 — Affliction
 
@@ -84,10 +84,10 @@ Curses affect players in different ways depending on which curse they receive. C
 ## Admin Setup
 
 To grant a player access to the admin panel, run the following command in-game as an operator:
-/tag <player> add ck.admin
+`/tag <player> add ck.admin`
 
 This must be done for each admin after every season reset. To revoke access:
-/tag <player> remove ck.admin
+`/tag <player> remove ck.admin`
 
 Without this tag, players will not be able to open the admin panel via `/trigger ck.admin`.
 
