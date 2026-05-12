@@ -27,12 +27,24 @@ tag @s remove ck.curse_3
 tag @s remove ck.curse_4
 tag @s remove ck.curse_5
 tag @s remove ck.curse_6
+tag @s remove ck.curse_7
+tag @s remove ck.curse_8
+tag @s remove ck.curse_9
+tag @s remove ck.curse_10
 scoreboard players set @s ck.curse_id 0
 
 # Clean up enforcement side effects
 effect clear @s minecraft:hunger
+effect clear @s minecraft:poison
+effect clear @s minecraft:nausea
 attribute @s minecraft:max_health base set 20
-execute as @s run attribute @s minecraft:movement_speed base set 0.1
+attribute @s minecraft:movement_speed base set 0.1
+
+# Reset enforcement timers
+scoreboard players set @s ck.soul_timer 0
+scoreboard players set @s ck.xp_level 0
+scoreboard players set @s ck.nether_timer 0
+scoreboard players set @s ck.vamp_timer 0
 
 # Start cooldown
 function curse_keeper:util/start_cooldown

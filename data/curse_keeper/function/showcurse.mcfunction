@@ -48,10 +48,10 @@ execute if entity @s[tag=ck.curse_6] run tellraw @s [{"text":"Curse: ","color":"
 execute if entity @s[tag=ck.curse_6] run tellraw @s [{"text":"Restriction: ","color":"gray"},{"text":"Your movement speed is reduced by 30%.","color":"white"}]
 execute if entity @s[tag=ck.curse_6] run tellraw @s [{"text":"Cleanse: ","color":"gray"},{"text":"Walk 50,000 Blocks — ","color":"green"},{"score":{"name":"@s","objective":"ck.walk_dist"},"color":"yellow"},{"text":"/50,000","color":"gray"}]
 
-# Famished
-execute if entity @s[tag=ck.curse_7] run tellraw @s [{"text":"Curse: ","color":"gray"},{"text":"Famished","color":"red","bold":true},{"text":" (Tier 2)","color":"dark_red"}]
-execute if entity @s[tag=ck.curse_7] run tellraw @s [{"text":"Restriction: ","color":"gray"},{"text":"Saturation is constantly drained, hunger effect applied periodically","color":"white"}]
-execute if entity @s[tag=ck.curse_7] run tellraw @s [{"text":"Cleanse: ","color":"gray"},{"text":"Consume 5 enchanted golden apples.","color":"green"}]
+# Soul Drain
+execute if entity @s[tag=ck.curse_7] run tellraw @s [{"text":"Curse: ","color":"gray"},{"text":"Soul Drain","color":"red","bold":true},{"text":" (Tier 2)","color":"dark_red"}]
+execute if entity @s[tag=ck.curse_7] run tellraw @s [{"text":"Restriction: ","color":"gray"},{"text":"You lose 1 XP level every 30 seconds.","color":"white"}]
+execute if entity @s[tag=ck.curse_7] run tellraw @s [{"text":"Cleanse: ","color":"gray"},{"text":"Reach level 50 while cursed.","color":"green"}]
 
 # Villager's Bane
 execute if entity @s[tag=ck.curse_8] run tellraw @s [{"text":"Curse: ","color":"gray"},{"text":"Villager's Bane","color":"red","bold":true},{"text":" (Tier 1)","color":"dark_red"}]

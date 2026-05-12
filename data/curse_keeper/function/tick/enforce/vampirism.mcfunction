@@ -1,18 +1,11 @@
-# ============================================================
-# curse_keeper:tick/enforce/vampirism
-# Sets player on fire when all conditions are met:
-# - In the Overworld
-# - Daytime (ticks 0..12000)
-# - Exposed to sky (sky light level 15 at player head position)
-# Fire is naturally extinguished by water.
-# Runs every tick via router.
-# ============================================================
+# Store daytime into global score every tick
+execute store result score #ck ck.day_check run time query day
 
-# Store current daytime into a score for comparison
-execute as @a[tag=ck.curse_10] store result score @s ck.vamp_timer run time query daytime
+# Increment timer
+execute as @a[tag=ck.curse_10] run scoreboard players add @s ck.vamp_timer 1
 
-# Apply fire only when in overworld + daytime + sky exposed
-execute as @a[tag=ck.curse_10, scores={ck.vamp_timer=0..12000}] at @s if entity @s[nbt={Dimension:"minecraft:overworld"}] if predicate curse_keeper:exposed_to_sky run data merge entity @s {Fire:40s}
+# Every 40 ticks, attempt to burn — pass to helper which resets timer
+execute as @a[tag=ck.curse_10, scores={ck.vamp_timer=40..}] at @s run function curse_keeper:tick/enforce/vampirism_burn
 
-# Actionbar warning when burning
-execute as @a[tag=ck.curse_10, scores={ck.vamp_timer=0..12000}] at @s if entity @s[nbt={Dimension:"minecraft:overworld"}] if predicate curse_keeper:exposed_to_sky run title @s actionbar {"text":"✦ Vampirism — Sunlight burns you ✦","color":"red","bold":true}
+# Initialize timer for any cursed player who doesn't have it set yet
+execute as @a[tag=ck.curse_10] unless score @s ck.vamp_timer = @s ck.vamp_timer run scoreboard players set @s ck.vamp_timer 0

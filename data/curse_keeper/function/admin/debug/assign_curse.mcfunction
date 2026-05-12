@@ -34,7 +34,7 @@ $execute as $(player) if score @s ck.curse_id matches 3 run function curse_keepe
 $execute as $(player) if score @s ck.curse_id matches 4 run function curse_keeper:curse/assign/bloodless
 $execute as $(player) if score @s ck.curse_id matches 5 run function curse_keeper:curse/assign/ender_blockade
 $execute as $(player) if score @s ck.curse_id matches 6 run function curse_keeper:curse/assign/sluggish
-$execute as $(player) if score @s ck.curse_id matches 7 run function curse_keeper:curse/assign/famished
+$execute as $(player) if score @s ck.curse_id matches 7 run function curse_keeper:curse/assign/soul_drain
 $execute as $(player) if score @s ck.curse_id matches 8 run function curse_keeper:curse/assign/villagers_bane
 $execute as $(player) if score @s ck.curse_id matches 9 run function curse_keeper:curse/assign/bee_marked
 $execute as $(player) if score @s ck.curse_id matches 10 run function curse_keeper:curse/assign/vampirism

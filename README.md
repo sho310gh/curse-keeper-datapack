@@ -66,7 +66,7 @@ Curses affect players in different ways depending on which curse they receive. C
 
 | Curse | Effect | Cleanse |
 |---|---|---|
-| **Famished** | Saturation constantly drained, hunger periodically applied | Consume 5 Enchanted Golden Apples |
+| **Soul Drain** | Lose 1 XP level every 30 seconds if you have one | Reach level 50 while cursed |
 | **Frail Vessel** | Max health reduced to 5 hearts | Obtain full Netherite armor (Cover Me in Debris) |
 | **Nether Sickness** | 1 heart damage every 15 seconds in the Nether | Enter a Nether Fortress (A Terrible Fortress) |
 | **Vampirism** | Exposed to sunlight in the Overworld sets you on fire | Kill 50 Phantoms & consume 20 Milk Buckets |

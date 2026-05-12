@@ -46,7 +46,7 @@ Triggers the cleanse for whatever curse the player currently has, bypassing kill
 | 4 | Bloodless | 3 |
 | 5 | Ender Blockade | 3 |
 | 6 | Sluggish | 1 |
-| 7 | Famished | 2 |
+| 7 | Soul Drain | 2 |
 | 8 | Villager's Bane | 1 |
 | 9 | Bee Marked | 3 |
 | 10 | Vampirism | 2 |

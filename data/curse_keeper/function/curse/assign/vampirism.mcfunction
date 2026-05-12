@@ -9,6 +9,7 @@ tag @s add ck.tier2
 tag @s add ck.curse_10
 scoreboard players set @s ck.curse_id 10
 scoreboard players set @s ck.tier 2
+scoreboard players set @s ck.vamp_timer 0
 
 effect give @s minecraft:darkness 2 1 false
 
