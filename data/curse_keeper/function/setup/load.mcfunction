@@ -56,7 +56,7 @@ execute if score #ck ck.system_on matches 0 run scoreboard players set #ck ck.sy
 execute if score #ck ck.dev_mode matches 0 run scoreboard players set #ck ck.dev_mode 0
 
 # --- Version broadcast ---
-tellraw @a ["",{"text":"[","color":"dark_gray"},{"text":"Curse Keeper","color":"dark_purple","bold":true},{"text":"]","color":"dark_gray"}," ",{"text":"v1.1.0 loaded. ","color":"gray"},{"text":"System: ","color":"gray"},{"score":{"name":"#ck","objective":"ck.system_on"},"color":"yellow"},{"text":" | Dev mode: ","color":"gray"},{"score":{"name":"#ck","objective":"ck.dev_mode"},"color":"yellow"}]
+tellraw @a ["",{"text":"[","color":"dark_gray"},{"text":"Curse Keeper","color":"dark_purple","bold":true},{"text":"]","color":"dark_gray"}," ",{"text":"System: ","color":"gray"},{"storage":"curse_keeper:settings","nbt":"admin.system_on","color":"green"},{"text":" | Dev mode: ","color":"gray"},{"storage":"curse_keeper:settings","nbt":"admin.dev_mode","color":"green"}]
 
 # --- Data storage defaults (only set on first load) ---
 # These hold human-readable strings for the admin panel display

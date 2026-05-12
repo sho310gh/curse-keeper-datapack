@@ -81,6 +81,18 @@ Curses affect players in different ways depending on which curse they receive. C
 
 ---
 
+## Admin Setup
+
+To grant a player access to the admin panel, run the following command in-game as an operator:
+/tag <player> add ck.admin
+
+This must be done for each admin after every season reset. To revoke access:
+/tag <player> remove ck.admin
+
+Without this tag, players will not be able to open the admin panel via `/trigger ck.admin`.
+
+---
+
 ## Commands
 
 ### For Players

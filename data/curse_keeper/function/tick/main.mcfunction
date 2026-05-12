@@ -5,10 +5,14 @@
 # All other systems only run when ck.system_on = 1.
 # ============================================================
 
-# Always: listen for admin panel trigger
-scoreboard players enable @a ck.admin
-execute as @a[scores={ck.admin=1..}] run function curse_keeper:admin/panel
-execute as @a[scores={ck.admin=1..}] run scoreboard players set @s ck.admin 0
+# Always: listen for admin panel trigger — only for tagged admins
+scoreboard players enable @a[tag=ck.admin] ck.admin
+execute as @a[tag=ck.admin, scores={ck.admin=1..}] run function curse_keeper:admin/panel
+execute as @a[tag=ck.admin, scores={ck.admin=1..}] run scoreboard players set @s ck.admin 0
+
+# Non-admins who try to trigger get a message
+execute as @a[tag=!ck.admin, scores={ck.admin=1..}] run tellraw @s [{"text":"[Curse Keeper] ","color":"dark_purple"},{"text":"You do not have permission to use the admin panel.","color":"red"}]
+execute as @a[tag=!ck.admin, scores={ck.admin=1..}] run scoreboard players set @s ck.admin 0
 
 # Gated: rest of the system only runs when active
 execute if score #ck ck.system_on matches 1 run function curse_keeper:tick/router
