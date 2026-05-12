@@ -9,6 +9,7 @@ tag @s add ck.tier1
 tag @s add ck.curse_8
 scoreboard players set @s ck.curse_id 8
 scoreboard players set @s ck.tier 1
+scoreboard players set @s ck.kill_iron_golem 0
 
 effect give @s minecraft:darkness 2 1 false
 

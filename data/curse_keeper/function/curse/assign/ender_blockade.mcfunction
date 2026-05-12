@@ -9,6 +9,7 @@ tag @s add ck.tier3
 tag @s add ck.curse_5
 scoreboard players set @s ck.curse_id 5
 scoreboard players set @s ck.tier 3
+scoreboard players set @s ck.kill_ravager 0
 
 effect give @s minecraft:darkness 2 1 false
 

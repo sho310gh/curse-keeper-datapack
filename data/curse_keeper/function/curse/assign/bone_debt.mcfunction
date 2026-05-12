@@ -9,6 +9,7 @@ tag @s add ck.tier1
 tag @s add ck.curse_1
 scoreboard players set @s ck.curse_id 1
 scoreboard players set @s ck.tier 1
+scoreboard players set @s ck.kill_skele 0
 execute unless score @s ck.kill_skele = @s ck.kill_skele run scoreboard players set @s ck.kill_skele 0
 
 # Apply darkness effect (icon only, amplitude 0, infinite duration, hide particles)

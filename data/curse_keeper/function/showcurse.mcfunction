@@ -46,8 +46,7 @@ execute if entity @s[tag=ck.curse_5] run tellraw @s [{"text":"Cleanse: ","color"
 # Sluggish
 execute if entity @s[tag=ck.curse_6] run tellraw @s [{"text":"Curse: ","color":"gray"},{"text":"Sluggish","color":"red","bold":true},{"text":" (Tier 1)","color":"dark_red"}]
 execute if entity @s[tag=ck.curse_6] run tellraw @s [{"text":"Restriction: ","color":"gray"},{"text":"Your movement speed is reduced by 30%.","color":"white"}]
-execute if entity @s[tag=ck.curse_6] run tellraw @s [{"text":"Cleanse: ","color":"gray"},{"text":"Walk 50,000 Blocks — ","color":"green"},{"score":{"name":"@s","objective":"ck.walk_dist"},"color":"yellow"},{"text":"/50,000","color":"gray"}]
-
+execute if entity @s[tag=ck.curse_6] run tellraw @s [{"text":"Cleanse: ","color":"gray"},{"text":"Walk 5,000,000 cm — ","color":"green"},{"score":{"name":"@s","objective":"ck.walk_dist"},"color":"yellow"},{"text":"/5,000,000","color":"gray"}]
 # Soul Drain
 execute if entity @s[tag=ck.curse_7] run tellraw @s [{"text":"Curse: ","color":"gray"},{"text":"Soul Drain","color":"red","bold":true},{"text":" (Tier 2)","color":"dark_red"}]
 execute if entity @s[tag=ck.curse_7] run tellraw @s [{"text":"Restriction: ","color":"gray"},{"text":"You lose 1 XP level every 30 seconds.","color":"white"}]

@@ -6,20 +6,7 @@
 # Broadcast first while tier info is still intact
 function curse_keeper:cleanse/broadcast
 
-# Check if this was tier 3 — season complete
-execute if score @s ck.tier matches 3 run function curse_keeper:cleanse/season_complete
-execute if score @s ck.tier matches 3 run return 0
-
-# Increment tier and update tier tags
-execute if score @s ck.tier matches 2 run tag @s remove ck.tier2
-execute if score @s ck.tier matches 2 run tag @s add ck.tier3
-execute if score @s ck.tier matches 2 run scoreboard players set @s ck.tier 3
-
-execute if score @s ck.tier matches 1 run tag @s remove ck.tier1
-execute if score @s ck.tier matches 1 run tag @s add ck.tier2
-execute if score @s ck.tier matches 1 run scoreboard players set @s ck.tier 2
-
-# Remove curse tags
+# Remove curse tags first regardless of tier
 tag @s remove ck.cursed
 tag @s remove ck.curse_1
 tag @s remove ck.curse_2
@@ -45,6 +32,19 @@ scoreboard players set @s ck.soul_timer 0
 scoreboard players set @s ck.xp_level 0
 scoreboard players set @s ck.nether_timer 0
 scoreboard players set @s ck.vamp_timer 0
+
+# Check if this was tier 3 — season complete, no cooldown needed
+execute if score @s ck.tier matches 3 run function curse_keeper:cleanse/season_complete
+execute if score @s ck.tier matches 3 run return 0
+
+# Increment tier and update tier tags
+execute if score @s ck.tier matches 2 run tag @s remove ck.tier2
+execute if score @s ck.tier matches 2 run tag @s add ck.tier3
+execute if score @s ck.tier matches 2 run scoreboard players set @s ck.tier 3
+
+execute if score @s ck.tier matches 1 run tag @s remove ck.tier1
+execute if score @s ck.tier matches 1 run tag @s add ck.tier2
+execute if score @s ck.tier matches 1 run scoreboard players set @s ck.tier 2
 
 # Start cooldown
 function curse_keeper:util/start_cooldown
