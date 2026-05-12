@@ -1,5 +1,5 @@
 # ☠ Curse Keeper
-### A Minecraft Java Datapack — Unique Curse System | v1.0.0
+### A Minecraft Java Datapack — Unique Curse System | v1.1.0
 
 > **Compatible with Minecraft Java 1.21.x** (pack format 88)
 
