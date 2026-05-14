@@ -21,3 +21,6 @@ execute if score #ck ck.system_on matches 1 run function curse_keeper:tick/route
 scoreboard players enable @a ck.showcurse
 execute as @a[scores={ck.showcurse=1..}] run function curse_keeper:showcurse
 execute as @a[scores={ck.showcurse=1..}] run scoreboard players set @s ck.showcurse 0
+
+# Clears the flag once player is alive again
+execute as @a[scores={ck.death_processed=1, time_since_death=1..}] run scoreboard players set @s ck.death_processed 0

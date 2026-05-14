@@ -6,7 +6,7 @@
 scoreboard players remove @a[tag=ck.on_cooldown] ck.cooldown 1
 
 # 1 minute warning (exactly 1200 ticks remaining)
-execute as @a[tag=ck.on_cooldown, scores={ck.cooldown=1200}] run tellraw @s [{"text":"[Curse Keeper] ","color":"dark_purple","bold":true},{"text":"Your next curse draws near — 1 minute remaining...","color":"yellow"}]
+execute as @a[tag=ck.on_cooldown, scores={ck.cooldown=1200}] run tellraw @s [{"text":"[Curse Keeper] ","color":"dark_purple"},{"text":"Your next curse draws near — 1 minute remaining...","color":"yellow"}]
 
 # Cooldown over — remove cooldown tag, add ready tag
 execute as @a[tag=ck.on_cooldown, scores={ck.cooldown=..0}] run tag @s add ck.curse_ready

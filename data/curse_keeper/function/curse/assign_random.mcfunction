@@ -16,11 +16,9 @@ execute unless entity @s[tag=ck.tier1] unless entity @s[tag=ck.tier2] unless ent
 execute if entity @s[tag=ck.tier1] run function curse_keeper:curse/roll_tier1
 
 # Tier 2 pool
-execute if entity @s[tag=ck.tier2] run scoreboard players set @s ck.curse_id 2
 execute if entity @s[tag=ck.tier2] run function curse_keeper:curse/roll_tier2
 
 # Tier 3 pool
-execute if entity @s[tag=ck.tier3] run scoreboard players set @s ck.curse_id 4
 execute if entity @s[tag=ck.tier3] run function curse_keeper:curse/roll_tier3
 
 # Now apply whichever curse was selected
@@ -34,3 +32,9 @@ execute if score @s ck.curse_id matches 7 run function curse_keeper:curse/assign
 execute if score @s ck.curse_id matches 8 run function curse_keeper:curse/assign/villagers_bane
 execute if score @s ck.curse_id matches 9 run function curse_keeper:curse/assign/bee_marked
 execute if score @s ck.curse_id matches 10 run function curse_keeper:curse/assign/vampirism
+execute if score @s ck.curse_id matches 11 run function curse_keeper:curse/assign/arachnophobia
+execute if score @s ck.curse_id matches 12 run function curse_keeper:curse/assign/rootbound
+execute if score @s ck.curse_id matches 13 run function curse_keeper:curse/assign/grave_pact
+execute if score @s ck.curse_id matches 14 run function curse_keeper:curse/assign/landlocked
+execute if score @s ck.curse_id matches 15 run function curse_keeper:curse/assign/moonbound
+execute if score @s ck.curse_id matches 16 run function curse_keeper:curse/assign/soul_debt

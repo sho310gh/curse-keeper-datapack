@@ -1,3 +1,3 @@
-tellraw @s [{"text":"--- Cursed Players ---","color":"dark_purple","bold":true}]
+tellraw @s [{"text":"--- Cursed Players ---","color":"dark_purple"}]
 execute as @a[tag=ck.cursed] run tellraw @s [{"selector":"@s","color":"white"},{"text":" — Curse #","color":"gray"},{"score":{"name":"@s","objective":"ck.curse_id"},"color":"yellow"},{"text":" Tier ","color":"gray"},{"score":{"name":"@s","objective":"ck.tier"},"color":"yellow"}]
 tellraw @s [{"text":"--- End of List ---","color":"dark_purple"}]

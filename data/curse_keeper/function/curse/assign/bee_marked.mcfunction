@@ -18,4 +18,3 @@ tellraw @s [{"text":"Curse: ","color":"gray"},{"text":"Bee Marked","color":"red"
 tellraw @s [{"text":"Tier: ","color":"gray"},{"text":"3 — Malediction","color":"dark_red"}]
 tellraw @s [{"text":"Restriction: ","color":"gray"},{"text":"Bees sense your corruption. Any bee within 16 blocks will aggro onto you instantly.","color":"white"}]
 tellraw @s [{"text":"Cleanse: ","color":"gray"},{"text":"Consume 100 honey bottles.","color":"green"}]
-tellraw @s [{"text":"\n","color":"gray"}]

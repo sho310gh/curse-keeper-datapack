@@ -18,7 +18,24 @@ tag @s remove ck.curse_7
 tag @s remove ck.curse_8
 tag @s remove ck.curse_9
 tag @s remove ck.curse_10
+tag @s remove ck.curse_11
+tag @s remove ck.curse_12
+tag @s remove ck.curse_13
+tag @s remove ck.curse_14
+tag @s remove ck.curse_15
+tag @s remove ck.curse_16
+tag @s remove ck.debt_dying
+tag @s remove ck.grave_sleeping
+tag @s remove ck.soul_cleansing
+tag @s remove ck.aggro_spider
+
+scoreboard players set @s ck.debt_hearts 0
+scoreboard players set @s ck.grave_hearts 0
 scoreboard players set @s ck.curse_id 0
+scoreboard players set @s ck.moon_timer 0
+scoreboard players set @s ck.water_timer 0
+scoreboard players set @s ck.spider_timer 0
+scoreboard players set @s ck.bee_timer 0
 
 # Clean up enforcement side effects
 effect clear @s minecraft:hunger

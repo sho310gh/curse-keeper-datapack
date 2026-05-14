@@ -17,4 +17,3 @@ tellraw @s [{"text":"Curse: ","color":"gray"},{"text":"Soul Drain","color":"red"
 tellraw @s [{"text":"Tier: ","color":"gray"},{"text":"2 — Affliction","color":"yellow"}]
 tellraw @s [{"text":"Restriction: ","color":"gray"},{"text":"Your soul slowly bleeds away. You lose 1 XP level every 30 seconds.","color":"white"}]
 tellraw @s [{"text":"Cleanse: ","color":"gray"},{"text":"Reach level 50 while cursed.","color":"green"}]
-tellraw @s [{"text":"\n","color":"gray"}]

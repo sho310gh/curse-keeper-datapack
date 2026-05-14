@@ -18,4 +18,3 @@ tellraw @s [{"text":"Curse: ","color":"gray"},{"text":"Villager's Bane","color":
 tellraw @s [{"text":"Tier: ","color":"gray"},{"text":"1 — Quirk","color":"yellow"}]
 tellraw @s [{"text":"Restriction: ","color":"gray"},{"text":"Villagers make you violently ill. Being within 5 blocks of one applies Poison and Nausea.","color":"white"}]
 tellraw @s [{"text":"Cleanse: ","color":"gray"},{"text":"Kill 10 Iron Golems.","color":"green"}]
-tellraw @s [{"text":"Tip: ","color":"gray"},{"text":"Run /trigger ck.showcurse to check your curse anytime.\n","color":"aqua"}]

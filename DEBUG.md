@@ -34,6 +34,14 @@ Triggers the cleanse for whatever curse the player currently has, bypassing kill
 /function curse_keeper:admin/debug/cleanse_curse {player:"NAME"}
 ```
 
+### Check all scores and tags
+
+Shows all active Curse Keeper scores, tags and global state for the calling player.
+
+```
+/function curse_keeper:admin/debug/status
+```
+
 ---
 
 ## Curse ID Reference
@@ -50,6 +58,12 @@ Triggers the cleanse for whatever curse the player currently has, bypassing kill
 | 8 | Villager's Bane | 1 |
 | 9 | Bee Marked | 3 |
 | 10 | Vampirism | 2 |
+| 11 | Arachnophobia | 1 |
+| 12 | Rootbound | 1 |
+| 13 | Grave Pact | 2 |
+| 14 | Landlocked | 2 |
+| 15 | Moonbound | 3 |
+| 16 | Soul Debt | 3 |
 
 ---
 
@@ -77,18 +91,23 @@ The recommended flow for testing a single curse from assignment to cleanse:
 /trigger ck.showcurse
 ```
 
-**5. Test the enforcement** — confirm the curse effect is actively applying (reduced speed, fire, poison near villagers, etc.)
+**5. Check scores and tags**
+```
+/function curse_keeper:admin/debug/status
+```
 
-**6. Trigger the cleanse**
+**6. Test the enforcement** — confirm the curse effect is actively applying (reduced speed, fire, poison near villagers, etc.)
+
+**7. Trigger the cleanse**
 ```
 /function curse_keeper:admin/debug/cleanse_curse {player:"NAME"}
 ```
 
-**7. Verify the cleanse message appeared and effects were removed**
+**8. Verify the cleanse message appeared and effects were removed**
 
-**8. Wait for the dev mode cooldown (2 minutes) and confirm the next tier curse is assigned automatically**
+**9. Wait for the dev mode cooldown (2 minutes) and confirm the next tier curse is assigned automatically**
 
-**9. Repeat for the next curse**
+**10. Repeat for the next curse**
 
 ---
 
@@ -97,4 +116,5 @@ The recommended flow for testing a single curse from assignment to cleanse:
 - `assign_curse` can be run on yourself or any online player by name
 - `cleanse_curse` bypasses all kill and consumption counters — it calls the cleanse function directly
 - Advancement-based cleanses (Frail Vessel, Nether Sickness, Bloodless) are also bypassed by `cleanse_curse`
+- Landlocked cleanse (Conduit Power effect) cannot be bypassed by `cleanse_curse` — you need to actually obtain the effect in-game, or manually run the cleanse function directly
 - After a full season cleanse (Tier 3 lifted), the player receives the `ck.season_free` tag and will no longer be assigned curses — use `reset_player` to start a fresh test cycle

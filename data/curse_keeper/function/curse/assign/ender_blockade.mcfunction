@@ -18,4 +18,3 @@ tellraw @s [{"text":"Curse: ","color":"gray"},{"text":"Ender Blockade","color":"
 tellraw @s [{"text":"Tier: ","color":"gray"},{"text":"3 — Malediction","color":"dark_red"}]
 tellraw @s [{"text":"Restriction: ","color":"gray"},{"text":"You cannot enter the End dimension.","color":"white"}]
 tellraw @s [{"text":"Cleanse: ","color":"gray"},{"text":"Kill 10 Ravagers.","color":"green"}]
-tellraw @s [{"text":"\n","color":"gray"}]

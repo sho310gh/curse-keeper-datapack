@@ -11,7 +11,7 @@
 
 The system is entirely **per-player** — everyone is on their own curse journey, independent of others. Some will push through every tier quickly, others might choose to live with their curse indefinitely. There's no timer forcing your hand.
 
-> ⚠️ This datapack is still in active development. More curses will be added in future updates. Currently **10 curses** are implemented.
+> ⚠️ This datapack is still in active development. More curses will be added in future updates. Currently **16 curses** are implemented.
 
 ---
 
@@ -34,6 +34,7 @@ Each curse has its own unique cleanse tribute — the specific challenge that mu
 - Kill a certain number of a specific mob (e.g. kill 150 Skeletons)
 - Earn a specific in-game advancement
 - Consume a specific item a set number of times
+- Reach a certain milestone while cursed
 
 The tribute varies per curse, so every tier may require a completely different kind of challenge.
 
@@ -45,10 +46,15 @@ Curses affect players in different ways depending on which curse they receive. C
 - **Dimension damage** — the player takes damage when entering or staying in certain dimensions
 - **End access blocked** — the player is prevented from entering the End
 - **Reduced movement speed** — the player moves significantly slower
-- **Hunger drain** — saturation is constantly drained and hunger is periodically applied
-- **Villager sickness** — proximity to villagers applies Poison and Nausea
-- **Bee aggro** — all bees within range aggro onto the player automatically
+- **XP drain** — experience levels are slowly siphoned away over time
+- **Mob aggro** — certain mobs within range aggro onto the player automatically
 - **Sunlight burn** — standing exposed under the sun in the Overworld sets the player on fire
+- **Moonlight burn** — standing exposed under the night sky sets the player on fire
+- **Water damage** — being submerged in water deals constant damage
+- **Villager sickness** — proximity to villagers applies Poison and Nausea
+- **Nature's toll** — breaking grass blocks periodically applies Slowness
+- **Sleep penalty** — each time the player sleeps, they lose 1 max heart permanently
+- **Death penalty** — each death permanently removes 1 max heart
 
 ---
 
@@ -60,24 +66,30 @@ Curses affect players in different ways depending on which curse they receive. C
 |---|---|---|
 | **Bone Debt** | Max health reduced by 5 hearts | Kill 150 Skeletons |
 | **Sluggish** | Movement speed reduced by 30% | Walk 5,000,000 cm |
-| **Villager's Bane** | Poison & Nausea applied within 10 blocks of a villager | Kill 10 Iron Golems |
+| **Villager's Bane** | Poison & Nausea applied within 5 blocks of a villager | Kill 10 Iron Golems |
+| **Arachnophobia** | Spiders aggro within 48 blocks, a spider spawns near you every 2 minutes at night | Kill 100 Spiders |
+| **Rootbound** | Every 10 grass blocks broken applies Slowness II for 5 seconds | Kill 100 Creepers |
 
 ### Tier 2 — Affliction
 
 | Curse | Effect | Cleanse |
 |---|---|---|
-| **Soul Drain** | Lose 1 XP level every 30 seconds if you have one | Reach level 50 while cursed |
 | **Frail Vessel** | Max health reduced to 5 hearts | Obtain full Netherite armor (Cover Me in Debris) |
 | **Nether Sickness** | 1 heart damage every 15 seconds in the Nether | Enter a Nether Fortress (A Terrible Fortress) |
-| **Vampirism** | Exposed to sunlight in the Overworld sets you on fire | Kill 50 Phantoms & consume 20 Milk Buckets |
+| **Soul Drain** | Lose 1 XP level every 30 seconds | Reach level 50 while cursed |
+| **Vampirism** | Standing exposed under the sun in the Overworld sets you on fire | Kill 50 Phantoms & consume 20 Milk Buckets |
+| **Grave Pact** | Each sleep removes 1 max heart permanently, death resets to full | Reach 1 heart then kill the Wither |
+| **Landlocked** | Being submerged in water deals constant damage | Obtain the Conduit Power effect |
 
 ### Tier 3 — Malediction
 
 | Curse | Effect | Cleanse |
 |---|---|---|
-| **Bee Marked** | Bees within 16 blocks aggro onto you automatically | Consume 100 Honey Bottles |
 | **Bloodless** | No natural health regeneration | Have every effect applied at once (How Did We Get Here?) |
 | **Ender Blockade** | Cannot enter the End dimension | Kill 10 Ravagers |
+| **Bee Marked** | Bees within 16 blocks aggro onto you automatically | Consume 100 Honey Bottles |
+| **Moonbound** | Standing exposed under the night sky in the Overworld sets you on fire | Kill the Elder Guardian 15 times |
+| **Soul Debt** | Each death removes 1 max heart permanently, stops at 1 heart | Kill the Ender Dragon 5 times & kill 10 players |
 
 ---
 

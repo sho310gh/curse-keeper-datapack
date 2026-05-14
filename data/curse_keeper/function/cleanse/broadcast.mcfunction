@@ -5,10 +5,10 @@
 # ============================================================
 
 # Personal message
-tellraw @s [{"text":"\n☀ ","color":"yellow"},{"text":"Your curse has been lifted!","color":"green","bold":true},{"text":" ☀\n","color":"yellow"}]
+tellraw @s [{"text":"[Curse Keeper] ","color":"dark_purple"},{"text":"Your curse has been lifted!","color":"green"}]
 
 # Server-wide announcement
-tellraw @a [{"text":"[Curse Keeper] ","color":"dark_purple","bold":true},{"selector":"@s","color":"white"},{"text":" has lifted their ","color":"gray"},{"text":"Tier ","color":"yellow"},{"score":{"name":"@s","objective":"ck.tier"},"color":"yellow"},{"text":" curse!","color":"gray"}]
+tellraw @a [{"text":"[Curse Keeper] ","color":"dark_purple"},{"selector":"@s","color":"white"},{"text":" has lifted their ","color":"gray"},{"text":"Tier ","color":"yellow"},{"score":{"name":"@s","objective":"ck.tier"},"color":"yellow"},{"text":" curse!","color":"gray"}]
 
 # Play a sound for all players
 execute at @s run playsound minecraft:ui.toast.challenge_complete master @a ~ ~ ~ 1 1

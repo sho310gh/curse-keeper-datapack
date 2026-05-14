@@ -17,4 +17,3 @@ tellraw @s [{"text":"Curse: ","color":"gray"},{"text":"Nether Sickness","color":
 tellraw @s [{"text":"Tier: ","color":"gray"},{"text":"2 — Affliction","color":"yellow"}]
 tellraw @s [{"text":"Restriction: ","color":"gray"},{"text":"You take 1 heart of damage every 15 seconds spent in the Nether.","color":"white"}]
 tellraw @s [{"text":"Cleanse: ","color":"gray"},{"text":"Enter a Nether Fortress (A Terrible Fortress).","color":"green"}]
-tellraw @s [{"text":"\n","color":"gray"}]

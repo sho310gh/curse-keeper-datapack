@@ -17,4 +17,3 @@ tellraw @s [{"text":"Curse: ","color":"gray"},{"text":"Bloodless","color":"red",
 tellraw @s [{"text":"Tier: ","color":"gray"},{"text":"3 — Malediction","color":"dark_red"}]
 tellraw @s [{"text":"Restriction: ","color":"gray"},{"text":"You cannot regenerate health naturally. Potions and golden apples still work.","color":"white"}]
 tellraw @s [{"text":"Cleanse: ","color":"gray"},{"text":"Have every effect applied at once (How Did We Get Here?).","color":"green"}]
-tellraw @s [{"text":"\n","color":"gray"}]

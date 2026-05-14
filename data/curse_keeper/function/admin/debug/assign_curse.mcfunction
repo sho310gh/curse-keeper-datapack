@@ -17,7 +17,17 @@ $tag $(player) remove ck.curse_7
 $tag $(player) remove ck.curse_8
 $tag $(player) remove ck.curse_9
 $tag $(player) remove ck.curse_10
+$tag $(player) remove ck.curse_11
+$tag $(player) remove ck.curse_12
+$tag $(player) remove ck.curse_13
+$tag $(player) remove ck.curse_14
+$tag $(player) remove ck.curse_15
+$tag $(player) remove ck.curse_16
 $tag $(player) remove ck.on_cooldown
+$tag $(player) remove ck.soul_cleansing
+$tag $(player) remove ck.grave_sleeping
+$tag $(player) remove ck.debt_dying
+$tag $(player) remove ck.aggro_spider
 $scoreboard players set $(player) ck.curse_id 0
 
 # Restore max health and clear effects in case previous curse affected them
@@ -38,3 +48,9 @@ $execute as $(player) if score @s ck.curse_id matches 7 run function curse_keepe
 $execute as $(player) if score @s ck.curse_id matches 8 run function curse_keeper:curse/assign/villagers_bane
 $execute as $(player) if score @s ck.curse_id matches 9 run function curse_keeper:curse/assign/bee_marked
 $execute as $(player) if score @s ck.curse_id matches 10 run function curse_keeper:curse/assign/vampirism
+$execute as $(player) if score @s ck.curse_id matches 11 run function curse_keeper:curse/assign/arachnophobia
+$execute as $(player) if score @s ck.curse_id matches 12 run function curse_keeper:curse/assign/rootbound
+$execute as $(player) if score @s ck.curse_id matches 13 run function curse_keeper:curse/assign/grave_pact
+$execute as $(player) if score @s ck.curse_id matches 14 run function curse_keeper:curse/assign/landlocked
+$execute as $(player) if score @s ck.curse_id matches 15 run function curse_keeper:curse/assign/moonbound
+$execute as $(player) if score @s ck.curse_id matches 16 run function curse_keeper:curse/assign/soul_debt

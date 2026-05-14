@@ -20,4 +20,3 @@ tellraw @s [{"text":"Curse: ","color":"gray"},{"text":"Vampirism","color":"red",
 tellraw @s [{"text":"Tier: ","color":"gray"},{"text":"2 — Affliction","color":"yellow"}]
 tellraw @s [{"text":"Restriction: ","color":"gray"},{"text":"Sunlight is your enemy. Standing exposed under the sun in the Overworld will set you ablaze.","color":"white"}]
 tellraw @s [{"text":"Cleanse: ","color":"gray"},{"text":"Kill 50 Phantoms and consume 20 milk buckets.","color":"green"}]
-tellraw @s [{"text":"\n","color":"gray"}]

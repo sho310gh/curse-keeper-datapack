@@ -17,4 +17,3 @@ tellraw @s [{"text":"Curse: ","color":"gray"},{"text":"Frail Vessel","color":"re
 tellraw @s [{"text":"Tier: ","color":"gray"},{"text":"2 — Affliction","color":"yellow"}]
 tellraw @s [{"text":"Restriction: ","color":"gray"},{"text":"Your maximum health is reduced to 5 hearts.","color":"white"}]
 tellraw @s [{"text":"Cleanse: ","color":"gray"},{"text":"Obtain full Netherite armor (Cover Me in Debris).","color":"green"}]
-tellraw @s [{"text":"\n","color":"gray"}]

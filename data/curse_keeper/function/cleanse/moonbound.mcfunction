@@ -1,0 +1,13 @@
+# ============================================================
+# curse_keeper:cleanse/moonbound
+# Triggered when player has killed 15 Elder Guardians.
+# ============================================================
+
+execute unless entity @s[tag=ck.curse_15] run return 0
+
+scoreboard players set @s ck.kill_elder_guardian 0
+scoreboard players set @s ck.moon_timer 0
+
+# tellraw @s [{"text":"[Curse Keeper] ","color":"dark_purple"},{"text":"The moon releases its hold. Moonbound is lifted.","color":"green"}]
+
+function curse_keeper:cleanse/on_cleanse
