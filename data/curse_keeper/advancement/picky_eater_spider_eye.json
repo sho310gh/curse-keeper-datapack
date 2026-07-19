@@ -1,0 +1,15 @@
+{
+  "criteria": {
+    "eat_spider_eye": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": ["minecraft:spider_eye"]
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "curse_keeper:tick/enforce/picky_eater_foods/picky_eater_spider_eye"
+  }
+}

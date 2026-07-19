@@ -5,41 +5,6 @@
 # and broadcasts the pack version to all online players.
 # ============================================================
 
-# --- Scoreboards ---
-# ck.curse_id   : Which curse a player has (1-5 in v1.0, 0 = none)
-# ck.tier        : Current curse tier (1, 2, or 3)
-# ck.cooldown    : Post-cleanse cooldown ticks (counts down to 0)
-# ck.nether_timer: Ticks spent in Nether (used by Nether Sickness)
-# ck.season_free : 1 = player has cleared all 3 tiers this season
-# ck.prev_health : Stores previous tick health (used by Bloodless)
-# ck.kill_skele  : Mirrors skeleton kill stat for Bone Debt tracking
-# ck.dev_mode    : Global flag — 1 = dev mode, 0 = prod mode
-# ck.system_on   : Global flag — 1 = curse system active, 0 = inactive
-# ck.admin: Trigger scoreboard for /trigger ck.admin
-# ck.walk_dist : Mirrors walk distance stat for Sluggish tracking (in cm, so 50,000 blocks = 5,000,000)
-# ck.kill_iron_golem : Tracks iron golem kills for Villager's Bane cleanse
-# ck.drink_honey : Tracks honey bottles consumed for Bee Marked cleanse
-# ck.kill_phantom : Tracks phantom kills for Vampirism cleanse
-# ck.drink_milk   : Tracks milk bucket consumption for Vampirism cleanse
-# ck.vamp_timer   : Stores daytime query result for Vampirism day check
-# ck.soul_timer : Tracks ticks for XP drain interval (Soul Drain enforcement)
-# ck.xp_level   : Stores current XP level for Soul Drain drain check and cleanse check
-# ck.kill_spider  : Tracks spider kills for Arachnophobia cleanse
-# ck.spider_timer : Tracks ticks for spider spawn interval
-# ck.kill_creeper  : Tracks creeper kills for Rootbound cleanse
-# ck.grass_broken  : Tracks grass blocks broken for Rootbound enforcement
-# ck.rootbound_mod : Scratch score for modulo operation
-# ck.const         : Constant objective for modulo operations
-# ck.grave_hearts  : Tracks current max health value for Grave Pact
-# ck.grave_slept   : Tracks sleep count for Grave Pact
-# ck.kill_wither   : Tracks Wither kills for Grave Pact cleanse
-# ck.water_timer : Tracks ticks for water damage interval (Landlocked enforcement)
-# ck.kill_elder_guardian : Tracks Elder Guardian kills for Moonbound cleanse
-# ck.moon_timer          : Tracks ticks for fire interval (Moonbound enforcement)
-# ck.debt_hearts      : Tracks current max health for Soul Debt enforcement
-# ck.kill_ender_dragon: Tracks Ender Dragon kills for Soul Debt cleanse
-# ck.kill_player      : Tracks player kills for Soul Debt cleanse
-
 scoreboard objectives add ck.curse_id dummy
 scoreboard objectives add ck.tier dummy
 scoreboard objectives add ck.cooldown dummy
@@ -55,6 +20,7 @@ scoreboard objectives add ck.kill_ravager minecraft.killed:minecraft.ravager
 scoreboard objectives add ck.walk_dist minecraft.custom:minecraft.walk_one_cm
 scoreboard objectives add ck.kill_iron_golem minecraft.killed:minecraft.iron_golem
 scoreboard objectives add ck.drink_honey minecraft.used:minecraft.honey_bottle
+scoreboard objectives add ck.use_honeycomb minecraft.used:minecraft.honeycomb
 scoreboard objectives add ck.kill_phantom minecraft.killed:minecraft.phantom
 scoreboard objectives add ck.drink_milk minecraft.used:minecraft.milk_bucket
 scoreboard objectives add ck.vamp_timer dummy
@@ -80,6 +46,62 @@ scoreboard objectives add ck.kill_ender_dragon minecraft.killed:minecraft.ender_
 scoreboard objectives add ck.kill_player minecraft.killed:minecraft.player
 scoreboard objectives add ck.death_processed dummy
 scoreboard objectives add time_since_death minecraft.custom:minecraft.time_since_death
+scoreboard objectives add ck.kill_warden minecraft.killed:minecraft.warden
+scoreboard objectives add ck.curse_warden_kills dummy
+scoreboard objectives add ck.night_count dummy
+scoreboard objectives add ck.daytime dummy
+scoreboard objectives add ck.spawn_night dummy
+scoreboard objectives add ck.near_heat1 dummy
+scoreboard objectives add ck.near_heat2 dummy
+scoreboard objectives add ck.near_heat3 dummy
+scoreboard objectives add ck.near_heat4 dummy
+scoreboard objectives add ck.hp_kill_skele minecraft.killed:minecraft.skeleton
+scoreboard objectives add ck.hp_kill_zombie minecraft.killed:minecraft.zombie
+scoreboard objectives add ck.armor_count dummy
+scoreboard objectives add ck.temp dummy
+
+# Picky Eater counters (39 foods + cake)
+scoreboard objectives add ck.picky_apple dummy
+scoreboard objectives add ck.picky_baked_potato dummy
+scoreboard objectives add ck.picky_beetroot dummy
+scoreboard objectives add ck.picky_beetroot_soup dummy
+scoreboard objectives add ck.picky_bread dummy
+scoreboard objectives add ck.picky_carrot dummy
+scoreboard objectives add ck.picky_chorus_fruit dummy
+scoreboard objectives add ck.picky_cooked_chicken dummy
+scoreboard objectives add ck.picky_cooked_cod dummy
+scoreboard objectives add ck.picky_cooked_mutton dummy
+scoreboard objectives add ck.picky_cooked_porkchop dummy
+scoreboard objectives add ck.picky_cooked_rabbit dummy
+scoreboard objectives add ck.picky_cooked_salmon dummy
+scoreboard objectives add ck.picky_cookie dummy
+scoreboard objectives add ck.picky_dried_kelp dummy
+scoreboard objectives add ck.picky_enchanted_golden_apple dummy
+scoreboard objectives add ck.picky_golden_apple dummy
+scoreboard objectives add ck.picky_golden_carrot dummy
+scoreboard objectives add ck.picky_honey_bottle dummy
+scoreboard objectives add ck.picky_melon_slice dummy
+scoreboard objectives add ck.picky_mushroom_stew dummy
+scoreboard objectives add ck.picky_poisonous_potato dummy
+scoreboard objectives add ck.picky_potato dummy
+scoreboard objectives add ck.picky_pumpkin_pie dummy
+scoreboard objectives add ck.picky_rabbit_stew dummy
+scoreboard objectives add ck.picky_beef dummy
+scoreboard objectives add ck.picky_chicken dummy
+scoreboard objectives add ck.picky_cod dummy
+scoreboard objectives add ck.picky_mutton dummy
+scoreboard objectives add ck.picky_porkchop dummy
+scoreboard objectives add ck.picky_rabbit dummy
+scoreboard objectives add ck.picky_salmon dummy
+scoreboard objectives add ck.picky_rotten_flesh dummy
+scoreboard objectives add ck.picky_spider_eye dummy
+scoreboard objectives add ck.picky_cooked_beef dummy
+scoreboard objectives add ck.picky_suspicious_stew dummy
+scoreboard objectives add ck.picky_tropical_fish dummy
+scoreboard objectives add ck.picky_pufferfish dummy
+scoreboard objectives add ck.picky_cake dummy
+scoreboard objectives add ck.picky_cake_last dummy
+scoreboard objectives add ck.cake_slices minecraft.custom:minecraft.eat_cake_slice
 
 scoreboard players set #10 ck.const 10
 scoreboard players set #2 ck.const 2

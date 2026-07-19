@@ -7,7 +7,7 @@
 # Show cooldown status if on cooldown
 execute if entity @s[tag=ck.on_cooldown] run tellraw @s [{"text":"\n--- ","color":"dark_purple"},{"text":"Curse Cooldown","color":"light_purple","bold":true},{"text":" ---","color":"dark_purple"}]
 execute if entity @s[tag=ck.on_cooldown] run tellraw @s [{"text":"Status: ","color":"gray"},{"text":"On cooldown — next curse incoming.","color":"yellow"}]
-execute if entity @s[tag=ck.on_cooldown] run tellraw @s [{"text":"Ticks remaining: ","color":"gray"},{"score":{"name":"@s","objective":"ck.cooldown"},"color":"yellow"}]
+execute if entity @s[tag=ck.on_cooldown] run function curse_keeper:util/show_cooldown
 execute if entity @s[tag=ck.on_cooldown] run tellraw @s [{"text":"--- ","color":"dark_purple"},{"text":"End","color":"light_purple"},{"text":" ---\n","color":"dark_purple"}]
 execute if entity @s[tag=ck.on_cooldown] run return 0
 
@@ -20,13 +20,13 @@ tellraw @s [{"text":"\n--- ","color":"dark_purple"},{"text":"Your Curse","color"
 
 # Bone Debt
 execute if entity @s[tag=ck.curse_1] run tellraw @s [{"text":"Curse: ","color":"gray"},{"text":"Bone Debt","color":"red","bold":true},{"text":" (Tier 1)","color":"yellow"}]
-execute if entity @s[tag=ck.curse_1] run tellraw @s [{"text":"Restriction: ","color":"gray"},{"text":"Max health reduced by 5 hearts.","color":"white"}]
+execute if entity @s[tag=ck.curse_1] run tellraw @s [{"text":"Restriction: ","color":"gray"},{"text":"Max health reduced by 3 hearts.","color":"white"}]
 execute if entity @s[tag=ck.curse_1] run tellraw @s [{"text":"Cleanse: ","color":"gray"},{"text":"Kill 150 skeletons — ","color":"green"},{"score":{"name":"@s","objective":"ck.kill_skele"},"color":"yellow"},{"text":"/150","color":"gray"}]
 
 # Frail Vessel
 execute if entity @s[tag=ck.curse_2] run tellraw @s [{"text":"Curse: ","color":"gray"},{"text":"Frail Vessel","color":"red","bold":true},{"text":" (Tier 2)","color":"yellow"}]
-execute if entity @s[tag=ck.curse_2] run tellraw @s [{"text":"Restriction: ","color":"gray"},{"text":"Max health reduced to 5 hearts.","color":"white"}]
-execute if entity @s[tag=ck.curse_2] run tellraw @s [{"text":"Cleanse: ","color":"gray"},{"text":"Obtain full Netherite armor (Cover Me in Debris).","color":"green"}]
+execute if entity @s[tag=ck.curse_2] run tellraw @s [{"text":"Restriction: ","color":"gray"},{"text":"Max health reduced to 4 hearts.","color":"white"}]
+execute if entity @s[tag=ck.curse_2] run tellraw @s [{"text":"Cleanse: ","color":"gray"},{"text":"Equip a full set of diamond armor while cursed.","color":"green"}]
 
 # Nether Sickness
 execute if entity @s[tag=ck.curse_3] run tellraw @s [{"text":"Curse: ","color":"gray"},{"text":"Nether Sickness","color":"red","bold":true},{"text":" (Tier 2)","color":"yellow"}]
@@ -58,14 +58,14 @@ execute if entity @s[tag=ck.curse_8] run tellraw @s [{"text":"Restriction: ","co
 execute if entity @s[tag=ck.curse_8] run tellraw @s [{"text":"Cleanse: ","color":"gray"},{"text":"Kill 10 Iron Golems — ","color":"green"},{"score":{"name":"@s","objective":"ck.kill_iron_golem"},"color":"yellow"},{"text":"/10","color":"gray"}]
 
 # Bee Marked
-execute if entity @s[tag=ck.curse_9] run tellraw @s [{"text":"Curse: ","color":"gray"},{"text":"Bee Marked","color":"red","bold":true},{"text":" (Tier 3)","color":"dark_red"}]
+execute if entity @s[tag=ck.curse_9] run tellraw @s [{"text":"Curse: ","color":"gray"},{"text":"Bee Marked","color":"red","bold":true},{"text":" (Tier 1)","color":"yellow"}]
 execute if entity @s[tag=ck.curse_9] run tellraw @s [{"text":"Restriction: ","color":"gray"},{"text":"Bees within 16 blocks aggro onto you automatically.","color":"white"}]
-execute if entity @s[tag=ck.curse_9] run tellraw @s [{"text":"Cleanse: ","color":"gray"},{"text":"Consume 100 honey bottles — ","color":"green"},{"score":{"name":"@s","objective":"ck.drink_honey"},"color":"yellow"},{"text":"/100","color":"gray"}]
+execute if entity @s[tag=ck.curse_9] run tellraw @s [{"text":"Cleanse: ","color":"gray"},{"text":"Consume 20 honey bottles — ","color":"green"},{"score":{"name":"@s","objective":"ck.drink_honey"},"color":"yellow"},{"text":"/20 | Use 20 honeycombs — ","color":"gray"},{"score":{"name":"@s","objective":"ck.use_honeycomb"},"color":"yellow"},{"text":"/20","color":"gray"}]
 
 # Vampirism
 execute if entity @s[tag=ck.curse_10] run tellraw @s [{"text":"Curse: ","color":"gray"},{"text":"Vampirism","color":"red","bold":true},{"text":" (Tier 2)","color":"dark_red"}]
 execute if entity @s[tag=ck.curse_10] run tellraw @s [{"text":"Restriction: ","color":"gray"},{"text":"Standing exposed under the sun in the Overworld sets you on fire.","color":"white"}]
-execute if entity @s[tag=ck.curse_10] run tellraw @s [{"text":"Cleanse: ","color":"gray"},{"text":"Kill 50 Phantoms — ","color":"green"},{"score":{"name":"@s","objective":"ck.kill_phantom"},"color":"yellow"},{"text":"/50 | Drink 20 Milk Buckets — ","color":"gray"},{"score":{"name":"@s","objective":"ck.drink_milk"},"color":"yellow"},{"text":"/20","color":"gray"}]
+execute if entity @s[tag=ck.curse_10] run tellraw @s [{"text":"Cleanse: ","color":"gray"},{"text":"Kill 20 Phantoms — ","color":"green"},{"score":{"name":"@s","objective":"ck.kill_phantom"},"color":"yellow"},{"text":"/20","color":"gray"},{"text":" | Drink 20 Milk Buckets — ","color":"green"},{"score":{"name":"@s","objective":"ck.drink_milk"},"color":"yellow"},{"text":"/20","color":"gray"}]
 
 # Arachnophobia
 execute if entity @s[tag=ck.curse_11] run tellraw @s [{"text":"Curse: ","color":"gray"},{"text":"Arachnophobia","color":"red","bold":true},{"text":" (Tier 1)","color":"dark_red"}]
@@ -82,24 +82,43 @@ scoreboard players operation @s ck.grave_hearts_display = @s ck.grave_hearts
 scoreboard players operation @s ck.grave_hearts_display /= #2 ck.const
 execute if entity @s[tag=ck.curse_13] run tellraw @s [{"text":"Curse: ","color":"gray"},{"text":"Grave Pact","color":"red","bold":true},{"text":" (Tier 2)","color":"dark_red"}]
 execute if entity @s[tag=ck.curse_13] run tellraw @s [{"text":"Restriction: ","color":"gray"},{"text":"Each sleep removes 1 max heart. Death resets your hearts to full.","color":"white"}]
-execute if entity @s[tag=ck.curse_13] run tellraw @s [{"text":"Cleanse: ","color":"gray"},{"text":"Reach 1 heart then kill the Wither","color":"green"}]
-execute if entity @s[tag=ck.curse_13] run tellraw @s [{"text":"Status: ","color":"gray"},{"text":"Hearts: ","color":"green"},{"score":{"name":"@s","objective":"ck.grave_hearts_display"},"color":"yellow"},{"text":" | ","color":"gray"},{"text":"Wither Kills: ","color":"green"},{"score":{"name":"@s","objective":"ck.kill_wither"},"color":"yellow"},{"text":"/1","color":"gray"}]
+execute if entity @s[tag=ck.curse_13] run tellraw @s [{"text":"Cleanse: ","color":"gray"},{"text":"Kill the Wither","color":"green"}]
 scoreboard players set @s ck.grave_hearts_display 0
 
 # Landlocked
 execute if entity @s[tag=ck.curse_14] run tellraw @s [{"text":"Curse: ","color":"gray"},{"text":"Landlocked","color":"red","bold":true},{"text":" (Tier 2)","color":"dark_red"}]
-execute if entity @s[tag=ck.curse_14] run tellraw @s [{"text":"Restriction: ","color":"gray"},{"text":"Being submerged in water deals constant damage.","color":"white"}]
+execute if entity @s[tag=ck.curse_14] run tellraw @s [{"text":"Restriction: ","color":"gray"},{"text":"Being submerged in water deals half a heart every 3 seconds.","color":"white"}]
 execute if entity @s[tag=ck.curse_14] run tellraw @s [{"text":"Cleanse: ","color":"gray"},{"text":"Obtain the Conduit Power effect.","color":"green"}]
 
 # Moonbound
 execute if entity @s[tag=ck.curse_15] run tellraw @s [{"text":"Curse: ","color":"gray"},{"text":"Moonbound","color":"red","bold":true},{"text":" (Tier 3)","color":"dark_red"}]
 execute if entity @s[tag=ck.curse_15] run tellraw @s [{"text":"Restriction: ","color":"gray"},{"text":"Standing exposed under the night sky in the Overworld sets you on fire.","color":"white"}]
-execute if entity @s[tag=ck.curse_15] run tellraw @s [{"text":"Cleanse: ","color":"gray"},{"text":"Kill the Elder Guardian 15 times — ","color":"green"},{"score":{"name":"@s","objective":"ck.kill_elder_guardian"},"color":"yellow"},{"text":"/15","color":"gray"}]
+execute if entity @s[tag=ck.curse_15] run tellraw @s [{"text":"Cleanse: ","color":"gray"},{"text":"Kill the Elder Guardian 6 times — ","color":"green"},{"score":{"name":"@s","objective":"ck.kill_elder_guardian"},"color":"yellow"},{"text":"/6","color":"gray"}]
 
 # Soul Debt
 execute if entity @s[tag=ck.curse_16] run tellraw @s [{"text":"Curse: ","color":"gray"},{"text":"Soul Debt","color":"red","bold":true},{"text":" (Tier 3)","color":"dark_red"}]
 execute if entity @s[tag=ck.curse_16] run tellraw @s [{"text":"Restriction: ","color":"gray"},{"text":"Every death removes 1 max heart permanently. Stops at 1 heart.","color":"white"}]
-execute if entity @s[tag=ck.curse_16] run tellraw @s [{"text":"Cleanse: ","color":"gray"},{"text":"Kill Ender Dragon 5x — ","color":"green"},{"score":{"name":"@s","objective":"ck.kill_ender_dragon"},"color":"yellow"},{"text":"/5 | Kill 10 Players — ","color":"gray"},{"score":{"name":"@s","objective":"ck.kill_player"},"color":"yellow"},{"text":"/10","color":"gray"}]
+execute if entity @s[tag=ck.curse_16] run tellraw @s [{"text":"Cleanse: ","color":"gray"},{"text":"Kill the Ender Dragon 3 times — ","color":"green"},{"score":{"name":"@s","objective":"ck.kill_ender_dragon"},"color":"yellow"},{"text":"/3","color":"gray"}]
+
+# Echo Marked
+execute if entity @s[tag=ck.curse_17] run tellraw @s [{"text":"Curse: ","color":"gray"},{"text":"Echo Marked","color":"red","bold":true},{"text":" (Tier 3)","color":"dark_red"}]
+execute if entity @s[tag=ck.curse_17] run tellraw @s [{"text":"Restriction: ","color":"gray"},{"text":"A Warden emerges near you every other night.","color":"white"}]
+execute if entity @s[tag=ck.curse_17] run tellraw @s [{"text":"Cleanse: ","color":"gray"},{"text":"Kill 5 Wardens (Curse Spawned Wardens don't count) — ","color":"green"},{"score":{"name":"@s","objective":"ck.curse_warden_kills"},"color":"yellow"},{"text":"/5","color":"gray"}]
+
+# Campfire Cough
+execute if entity @s[tag=ck.curse_18] run tellraw @s [{"text":"Curse: ","color":"gray"},{"text":"Campfire Cough","color":"red","bold":true},{"text":" (Tier 2)","color":"dark_red"}]
+execute if entity @s[tag=ck.curse_18] run tellraw @s [{"text":"Restriction: ","color":"gray"},{"text":"Nausea near active furnaces, smokers, and campfires.","color":"white"}]
+execute if entity @s[tag=ck.curse_18] run tellraw @s [{"text":"Cleanse: ","color":"gray"},{"text":"Have 64 cooked cod in your inventory.","color":"green"}]
+
+# Picky Eater
+execute if entity @s[tag=ck.curse_19] run tellraw @s [{"text":"Curse: ","color":"gray"},{"text":"Picky Eater","color":"red","bold":true},{"text":" (Tier 2)","color":"dark_red"}]
+execute if entity @s[tag=ck.curse_19] run tellraw @s [{"text":"Restriction: ","color":"gray"},{"text":"Eating the same food 4+ times makes you sick.","color":"white"}]
+execute if entity @s[tag=ck.curse_19] run tellraw @s [{"text":"Cleanse: ","color":"gray"},{"text":"Earn 'A Balanced Diet' advancement.","color":"green"}]
+
+# Heavy Plate
+execute if entity @s[tag=ck.curse_20] run tellraw @s [{"text":"Curse: ","color":"gray"},{"text":"Heavy Plate","color":"red","bold":true},{"text":" (Tier 1)","color":"yellow"}]
+execute if entity @s[tag=ck.curse_20] run tellraw @s [{"text":"Restriction: ","color":"gray"},{"text":"Non-exempt armor slows you. 1=5% 2=10% 3=20% 4=40%.","color":"white"}]
+execute if entity @s[tag=ck.curse_20] run tellraw @s [{"text":"Cleanse: ","color":"gray"},{"text":"Kill 50 Skeletons & 50 Zombies — Skeletons: ","color":"green"},{"score":{"name":"@s","objective":"ck.hp_kill_skele"},"color":"yellow"},{"text":"/50","color":"gray"},{"text":" Zombies: ","color":"green"},{"score":{"name":"@s","objective":"ck.hp_kill_zombie"},"color":"yellow"},{"text":"/50","color":"gray"}]
 
 # Cooldown status
 tellraw @s [{"text":"--- ","color":"dark_purple"},{"text":"End","color":"light_purple"},{"text":" ---\n","color":"dark_purple"}]

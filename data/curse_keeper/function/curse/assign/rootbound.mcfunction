@@ -10,6 +10,7 @@ tag @s add ck.curse_12
 scoreboard players set @s ck.curse_id 12
 scoreboard players set @s ck.tier 1
 scoreboard players set @s ck.rootbound_mod 0
+scoreboard players set @s ck.kill_creeper 0
 
 effect give @s minecraft:darkness 2 1 false
 

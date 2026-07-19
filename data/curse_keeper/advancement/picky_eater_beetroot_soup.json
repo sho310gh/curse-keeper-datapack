@@ -1,0 +1,15 @@
+{
+  "criteria": {
+    "eat_beetroot_soup": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": ["minecraft:beetroot_soup"]
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "curse_keeper:tick/enforce/picky_eater_foods/picky_eater_beetroot_soup"
+  }
+}

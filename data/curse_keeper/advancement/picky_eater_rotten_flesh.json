@@ -1,0 +1,15 @@
+{
+  "criteria": {
+    "eat_rotten_flesh": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": ["minecraft:rotten_flesh"]
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "curse_keeper:tick/enforce/picky_eater_foods/picky_eater_rotten_flesh"
+  }
+}

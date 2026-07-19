@@ -23,6 +23,10 @@ $tag $(player) remove ck.curse_13
 $tag $(player) remove ck.curse_14
 $tag $(player) remove ck.curse_15
 $tag $(player) remove ck.curse_16
+$tag $(player) remove ck.curse_17
+$tag $(player) remove ck.curse_18
+$tag $(player) remove ck.curse_19
+$tag $(player) remove ck.curse_20
 $tag $(player) remove ck.on_cooldown
 $tag $(player) remove ck.soul_cleansing
 $tag $(player) remove ck.grave_sleeping
@@ -38,6 +42,10 @@ $effect clear $(player) minecraft:nausea
 
 # Set the requested curse ID on the target and dispatch to assign function
 $scoreboard players set $(player) ck.curse_id $(curse_id)
+
+$execute as $(player) run attribute @s minecraft:movement_speed modifier remove curse_keeper:heavy_plate_speed
+$execute as $(player) run attribute @s minecraft:movement_speed base set 0.1
+
 $execute as $(player) if score @s ck.curse_id matches 1 run function curse_keeper:curse/assign/bone_debt
 $execute as $(player) if score @s ck.curse_id matches 2 run function curse_keeper:curse/assign/frail_vessel
 $execute as $(player) if score @s ck.curse_id matches 3 run function curse_keeper:curse/assign/nether_sickness
@@ -54,3 +62,7 @@ $execute as $(player) if score @s ck.curse_id matches 13 run function curse_keep
 $execute as $(player) if score @s ck.curse_id matches 14 run function curse_keeper:curse/assign/landlocked
 $execute as $(player) if score @s ck.curse_id matches 15 run function curse_keeper:curse/assign/moonbound
 $execute as $(player) if score @s ck.curse_id matches 16 run function curse_keeper:curse/assign/soul_debt
+$execute as $(player) if score @s ck.curse_id matches 17 run function curse_keeper:curse/assign/echo_marked
+$execute as $(player) if score @s ck.curse_id matches 18 run function curse_keeper:curse/assign/campfire_cough
+$execute as $(player) if score @s ck.curse_id matches 19 run function curse_keeper:curse/assign/picky_eater
+$execute as $(player) if score @s ck.curse_id matches 20 run function curse_keeper:curse/assign/heavy_plate

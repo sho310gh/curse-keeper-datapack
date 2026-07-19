@@ -1,0 +1,15 @@
+{
+  "criteria": {
+    "eat_dried_kelp": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": ["minecraft:dried_kelp"]
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "curse_keeper:tick/enforce/picky_eater_foods/picky_eater_dried_kelp"
+  }
+}

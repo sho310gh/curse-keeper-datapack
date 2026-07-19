@@ -1,0 +1,15 @@
+{
+  "criteria": {
+    "eat_suspicious_stew": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": ["minecraft:suspicious_stew"]
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "curse_keeper:tick/enforce/picky_eater_foods/picky_eater_suspicious_stew"
+  }
+}

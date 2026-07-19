@@ -1,7 +1,7 @@
 # ☠ Curse Keeper
 ### A Minecraft Java Datapack — Unique Curse System
 
-> **Compatible with Minecraft Java 26.x** (pack format 88)
+> **Compatible with Minecraft Java 26.x** (pack format 107)
 
 ---
 
@@ -11,7 +11,7 @@
 
 The system is entirely **per-player** — everyone is on their own curse journey, independent of others. Some will push through every tier quickly, others might choose to live with their curse indefinitely. There's no timer forcing your hand.
 
-> ⚠️ This datapack is still in active development. More curses will be added in future updates. Currently **16 curses** are implemented.
+> ⚠️ This datapack is still in active development. More curses will be added in future updates. Currently **20 curses** are implemented.
 
 ---
 
@@ -55,6 +55,14 @@ Curses affect players in different ways depending on which curse they receive. C
 - **Nature's toll** — breaking grass blocks periodically applies Slowness
 - **Sleep penalty** — each time the player sleeps, they lose 1 max heart permanently
 - **Death penalty** — each death permanently removes 1 max heart
+- **Night mob spawn** — a powerful mob spawns near the player periodically at night
+- **Area nausea** — being near certain blocks applies Nausea
+- **Food sickness** — eating the same food repeatedly causes Hunger and Poison
+- **Armor speed penalty** — wearing heavy armor reduces movement speed
+
+### New Mechanics
+
+- **Carved Pumpkin** — Wearing a carved pumpkin reduces the effects of **Vampirism** and **Moonbound**
 
 ---
 
@@ -64,22 +72,26 @@ Curses affect players in different ways depending on which curse they receive. C
 
 | Curse | Effect | Cleanse |
 |---|---|---|
-| **Bone Debt** | Max health reduced by 5 hearts | Kill 150 Skeletons |
+| **Bone Debt** | Max health reduced by 3 hearts | Kill 150 Skeletons |
 | **Sluggish** | Movement speed reduced by 30% | Walk 5,000,000 cm |
 | **Villager's Bane** | Poison & Nausea applied within 5 blocks of a villager | Kill 10 Iron Golems |
 | **Arachnophobia** | Spiders aggro within 48 blocks, a spider spawns near you every 2 minutes at night | Kill 100 Spiders |
 | **Rootbound** | Every 10 grass blocks broken applies Slowness II for 5 seconds | Kill 100 Creepers |
+| **Bee Marked** | Bees within 16 blocks aggro onto you automatically | Consume 20 Honey Bottles & 20 Honeycombs |
+| **Campfire Cough** | Nausea when near active furnaces, smokers, or campfires | Have 64 cooked cod in your inventory |
+| **Heavy Plate** | Non-exempt armor (iron, copper, gold, diamond, netherite) slows you. 1 piece = -5%, 2 = -10%, 3 = -20%, 4 = -40%. Leather and chainmail are safe. | Kill 50 Skeletons & 50 Zombies |
 
 ### Tier 2 — Affliction
 
 | Curse | Effect | Cleanse |
 |---|---|---|
-| **Frail Vessel** | Max health reduced to 5 hearts | Obtain full Netherite armor (Cover Me in Debris) |
+| **Frail Vessel** | Max health reduced to 6 hearts | Obtain full Diamond armor |
 | **Nether Sickness** | 1 heart damage every 15 seconds in the Nether | Enter a Nether Fortress (A Terrible Fortress) |
 | **Soul Drain** | Lose 1 XP level every 30 seconds | Reach level 50 while cursed |
-| **Vampirism** | Standing exposed under the sun in the Overworld sets you on fire | Kill 50 Phantoms & consume 20 Milk Buckets |
+| **Vampirism** | Standing exposed under the sun in the Overworld sets you on fire. Wearing a carved pumpkin reduces this effect. | Kill 20 Phantoms & consume 20 Milk Buckets |
 | **Grave Pact** | Each sleep removes 1 max heart permanently, death resets to full | Reach 1 heart then kill the Wither |
-| **Landlocked** | Being submerged in water deals constant damage | Obtain the Conduit Power effect |
+| **Landlocked** | Being submerged in water deals constant damage (3-second delay before damage applies) | Obtain the Conduit Power effect |
+| **Picky Eater** | Eating the same food 4+ times causes Hunger and Poison. Sweet berries are safe. | Earn 'A Balanced Diet' advancement |
 
 ### Tier 3 — Malediction
 
@@ -87,9 +99,9 @@ Curses affect players in different ways depending on which curse they receive. C
 |---|---|---|
 | **Bloodless** | No natural health regeneration | Have every effect applied at once (How Did We Get Here?) |
 | **Ender Blockade** | Cannot enter the End dimension | Kill 10 Ravagers |
-| **Bee Marked** | Bees within 16 blocks aggro onto you automatically | Consume 100 Honey Bottles |
-| **Moonbound** | Standing exposed under the night sky in the Overworld sets you on fire | Kill the Elder Guardian 15 times |
-| **Soul Debt** | Each death removes 1 max heart permanently, stops at 1 heart | Kill the Ender Dragon 5 times & kill 10 players |
+| **Moonbound** | Standing exposed under the night sky in the Overworld sets you on fire. Wearing a carved pumpkin reduces this effect. | Kill the Elder Guardian 6 times |
+| **Soul Debt** | Each death removes 1 max heart permanently, stops at 1 heart | Kill the Ender Dragon 3 times |
+| **Echo Marked** | A Warden emerges near you every other night | Kill 5 Wardens (curse-spawned Wardens don't count) |
 
 ---
 

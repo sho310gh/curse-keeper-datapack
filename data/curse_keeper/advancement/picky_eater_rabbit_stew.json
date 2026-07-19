@@ -1,0 +1,15 @@
+{
+  "criteria": {
+    "eat_rabbit_stew": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": ["minecraft:rabbit_stew"]
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "curse_keeper:tick/enforce/picky_eater_foods/picky_eater_rabbit_stew"
+  }
+}

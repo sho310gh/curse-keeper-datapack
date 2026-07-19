@@ -38,3 +38,7 @@ execute if score @s ck.curse_id matches 13 run function curse_keeper:curse/assig
 execute if score @s ck.curse_id matches 14 run function curse_keeper:curse/assign/landlocked
 execute if score @s ck.curse_id matches 15 run function curse_keeper:curse/assign/moonbound
 execute if score @s ck.curse_id matches 16 run function curse_keeper:curse/assign/soul_debt
+execute if score @s ck.curse_id matches 17 run function curse_keeper:curse/assign/echo_marked
+execute if score @s ck.curse_id matches 18 run function curse_keeper:curse/assign/campfire_cough
+execute if score @s ck.curse_id matches 19 run function curse_keeper:curse/assign/picky_eater
+execute if score @s ck.curse_id matches 20 run function curse_keeper:curse/assign/heavy_plate

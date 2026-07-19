@@ -12,6 +12,4 @@ scoreboard players set @s ck.grave_slept 0
 scoreboard players set @s ck.kill_wither 0
 tag @s remove ck.grave_sleeping
 
-# tellraw @s [{"text":"[Curse Keeper] ","color":"dark_purple"},{"text":"The pact is fulfilled. Grave Pact is lifted.","color":"green"}]
-
 function curse_keeper:cleanse/on_cleanse

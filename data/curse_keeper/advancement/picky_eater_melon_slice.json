@@ -1,0 +1,15 @@
+{
+  "criteria": {
+    "eat_melon_slice": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": ["minecraft:melon_slice"]
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "curse_keeper:tick/enforce/picky_eater_foods/picky_eater_melon_slice"
+  }
+}

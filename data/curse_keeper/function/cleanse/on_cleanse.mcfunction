@@ -24,10 +24,15 @@ tag @s remove ck.curse_13
 tag @s remove ck.curse_14
 tag @s remove ck.curse_15
 tag @s remove ck.curse_16
+tag @s remove ck.curse_17
+tag @s remove ck.curse_18
+tag @s remove ck.curse_19
+tag @s remove ck.curse_20
 tag @s remove ck.debt_dying
 tag @s remove ck.grave_sleeping
 tag @s remove ck.soul_cleansing
 tag @s remove ck.aggro_spider
+tag @s remove ck.night_triggered
 
 scoreboard players set @s ck.debt_hearts 0
 scoreboard players set @s ck.grave_hearts 0
@@ -36,6 +41,14 @@ scoreboard players set @s ck.moon_timer 0
 scoreboard players set @s ck.water_timer 0
 scoreboard players set @s ck.spider_timer 0
 scoreboard players set @s ck.bee_timer 0
+scoreboard players set @s ck.hp_kill_skele 0
+scoreboard players set @s ck.hp_kill_zombie 0
+scoreboard players set @s ck.armor_count 0
+scoreboard players set @s ck.spawn_night 0
+scoreboard players set @s ck.curse_warden_kills 0
+scoreboard players set @s ck.daytime 0
+scoreboard players set @s ck.kill_ravager 0
+scoreboard players set @s ck.death_processed 0
 
 # Clean up enforcement side effects
 effect clear @s minecraft:hunger
@@ -43,6 +56,7 @@ effect clear @s minecraft:poison
 effect clear @s minecraft:nausea
 attribute @s minecraft:max_health base set 20
 attribute @s minecraft:movement_speed base set 0.1
+attribute @s minecraft:movement_speed modifier remove curse_keeper:heavy_plate_speed
 
 # Reset enforcement timers
 scoreboard players set @s ck.soul_timer 0

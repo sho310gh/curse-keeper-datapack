@@ -20,4 +20,4 @@ tellraw @s [{"text":"\n☠ YOU HAVE BEEN CURSED ☠\n","color":"dark_purple","bo
 tellraw @s [{"text":"Curse: ","color":"gray"},{"text":"Grave Pact","color":"red","bold":true}]
 tellraw @s [{"text":"Tier: ","color":"gray"},{"text":"2 — Affliction","color":"yellow"}]
 tellraw @s [{"text":"Restriction: ","color":"gray"},{"text":"Each time you sleep, you lose 1 max heart. Death resets your hearts to full.","color":"white"}]
-tellraw @s [{"text":"Cleanse: ","color":"gray"},{"text":"Reach 1 heart remaining then slay the Wither.","color":"green"}]
+tellraw @s [{"text":"Cleanse: ","color":"gray"},{"text":"Kill the Wither.","color":"green"}]

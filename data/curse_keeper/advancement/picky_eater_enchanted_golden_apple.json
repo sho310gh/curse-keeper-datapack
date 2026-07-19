@@ -1,0 +1,15 @@
+{
+  "criteria": {
+    "eat_enchanted_golden_apple": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": ["minecraft:enchanted_golden_apple"]
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "curse_keeper:tick/enforce/picky_eater_foods/picky_eater_enchanted_golden_apple"
+  }
+}

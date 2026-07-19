@@ -21,3 +21,7 @@ $execute as $(player) if entity @s[tag=ck.curse_13] run function curse_keeper:cl
 $execute as $(player) if entity @s[tag=ck.curse_14] run function curse_keeper:cleanse/landlocked
 $execute as $(player) if entity @s[tag=ck.curse_15] run function curse_keeper:cleanse/moonbound
 $execute as $(player) if entity @s[tag=ck.curse_16] run function curse_keeper:cleanse/soul_debt
+$execute as $(player) if entity @s[tag=ck.curse_17] run function curse_keeper:cleanse/echo_marked
+$execute as $(player) if entity @s[tag=ck.curse_18] run function curse_keeper:cleanse/campfire_cough
+$execute as $(player) if entity @s[tag=ck.curse_19] run function curse_keeper:cleanse/picky_eater
+$execute as $(player) if entity @s[tag=ck.curse_20] run function curse_keeper:cleanse/heavy_plate

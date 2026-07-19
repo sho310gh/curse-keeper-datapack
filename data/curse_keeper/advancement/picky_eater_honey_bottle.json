@@ -1,0 +1,15 @@
+{
+  "criteria": {
+    "eat_honey_bottle": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": ["minecraft:honey_bottle"]
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "curse_keeper:tick/enforce/picky_eater_foods/picky_eater_honey_bottle"
+  }
+}

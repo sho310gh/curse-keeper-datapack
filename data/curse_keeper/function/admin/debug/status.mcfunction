@@ -1,35 +1,106 @@
 # ============================================================
 # curse_keeper:admin/debug/status
-# Shows all Curse Keeper scores and tags for @s (the caller).
-# Safe for any op to run. Useful during all phases of testing.
-# Usage: /function curse_keeper:admin/debug/status
+# Server-wide curse roster with red names and face icons.
+# Requires a "ck_cursed" team for color/face formatting.
 # ============================================================
 
-tellraw @s ["",{"text":"--- ","color":"dark_gray"},{"text":"CK DEBUG STATUS","color":"dark_purple","bold":true},{"text":" ---","color":"dark_gray"}]
+# Create team if not exists (run once in setup or here)
+team add ck_cursed
+team modify ck_cursed color red
 
-# --- Global state (stored on fake player #ck) ---
-tellraw @s ["",{"text":"[GLOBAL] ","color":"gold"},{"text":"System on: ","color":"gray"},{"score":{"name":"#ck","objective":"ck.system_on"},"color":"yellow"},{"text":"  Dev mode: ","color":"gray"},{"score":{"name":"#ck","objective":"ck.dev_mode"},"color":"yellow"},{"text":"  Day check: ","color":"gray"},{"score":{"name":"#ck","objective":"ck.day_check"},"color":"yellow"}]
+tellraw @s ["",{"text":"--- ","color":"dark_gray"},{"text":"CK CURSE ROSTER","color":"dark_purple","bold":true},{"text":" ---","color":"dark_gray"}]
 
-# --- Personal scores ---
-tellraw @s ["",{"text":"[SCORES] ","color":"aqua"},{"text":"curse_id: ","color":"gray"},{"score":{"name":"@s","objective":"ck.curse_id"},"color":"white"},{"text":"  tier: ","color":"gray"},{"score":{"name":"@s","objective":"ck.tier"},"color":"white"},{"text":"  season_free: ","color":"gray"},{"score":{"name":"@s","objective":"ck.season_free"},"color":"white"}]
-tellraw @s ["",{"text":"[SCORES] ","color":"aqua"},{"text":"cooldown: ","color":"gray"},{"score":{"name":"@s","objective":"ck.cooldown"},"color":"white"},{"text":"  nether_timer: ","color":"gray"},{"score":{"name":"@s","objective":"ck.nether_timer"},"color":"white"},{"text":"  prev_health: ","color":"gray"},{"score":{"name":"@s","objective":"ck.prev_health"},"color":"white"}]
-tellraw @s ["",{"text":"[SCORES] ","color":"aqua"},{"text":"kill_skele: ","color":"gray"},{"score":{"name":"@s","objective":"ck.kill_skele"},"color":"white"},{"text":"  kill_ravager: ","color":"gray"},{"score":{"name":"@s","objective":"ck.kill_ravager"},"color":"white"},{"text":"  kill_iron_golem: ","color":"gray"},{"score":{"name":"@s","objective":"ck.kill_iron_golem"},"color":"white"},{"text":"  kill_phantom: ","color":"gray"},{"score":{"name":"@s","objective":"ck.kill_phantom"},"color":"white"}]
-tellraw @s ["",{"text":"[SCORES] ","color":"aqua"},{"text":"walk_dist: ","color":"gray"},{"score":{"name":"@s","objective":"ck.walk_dist"},"color":"white"},{"text":"  drink_honey: ","color":"gray"},{"score":{"name":"@s","objective":"ck.drink_honey"},"color":"white"},{"text":"  drink_milk: ","color":"gray"},{"score":{"name":"@s","objective":"ck.drink_milk"},"color":"white"}]
-tellraw @s ["",{"text":"[SCORES] ","color":"aqua"},{"text":"soul_timer: ","color":"gray"},{"score":{"name":"@s","objective":"ck.soul_timer"},"color":"white"},{"text":"  xp_level: ","color":"gray"},{"score":{"name":"@s","objective":"ck.xp_level"},"color":"white"},{"text":"  vamp_timer: ","color":"gray"},{"score":{"name":"@s","objective":"ck.vamp_timer"},"color":"white"},{"text":"  bee_timer: ","color":"gray"},{"score":{"name":"@s","objective":"ck.bee_timer"},"color":"white"}]
-tellraw @s ["",{"text":"[SCORES] ","color":"aqua"},{"text":"kill_spider: ","color":"gray"},{"score":{"name":"@s","objective":"ck.kill_spider"},"color":"white"},{"text":"  spider_timer: ","color":"gray"},{"score":{"name":"@s","objective":"ck.spider_timer"},"color":"white"}]
-tellraw @s ["",{"text":"[SCORES] ","color":"aqua"},{"text":"kill_creeper: ","color":"gray"},{"score":{"name":"@s","objective":"ck.kill_creeper"},"color":"white"},{"text":"  grass_broken: ","color":"gray"},{"score":{"name":"@s","objective":"ck.grass_broken"},"color":"white"},{"text":"  rootbound_mod: ","color":"gray"},{"score":{"name":"@s","objective":"ck.rootbound_mod"},"color":"white"}]
-tellraw @s ["",{"text":"[SCORES] ","color":"aqua"},{"text":"grave_hearts: ","color":"gray"},{"score":{"name":"@s","objective":"ck.grave_hearts"},"color":"white"},{"text":"  grave_slept: ","color":"gray"},{"score":{"name":"@s","objective":"ck.grave_slept"},"color":"white"},{"text":"  kill_wither: ","color":"gray"},{"score":{"name":"@s","objective":"ck.kill_wither"},"color":"white"}]
-tellraw @s ["",{"text":"[SCORES] ","color":"aqua"},{"text":"water_timer: ","color":"gray"},{"score":{"name":"@s","objective":"ck.water_timer"},"color":"white"}]
-tellraw @s ["",{"text":"[SCORES] ","color":"aqua"},{"text":"kill_elder_guardian: ","color":"gray"},{"score":{"name":"@s","objective":"ck.kill_elder_guardian"},"color":"white"},{"text":"  moon_timer: ","color":"gray"},{"score":{"name":"@s","objective":"ck.moon_timer"},"color":"white"}]
-tellraw @s ["",{"text":"[SCORES] ","color":"aqua"},{"text":"debt_hearts: ","color":"gray"},{"score":{"name":"@s","objective":"ck.debt_hearts"},"color":"white"},{"text":"  kill_ender_dragon: ","color":"gray"},{"score":{"name":"@s","objective":"ck.kill_ender_dragon"},"color":"white"},{"text":"  kill_player: ","color":"gray"},{"score":{"name":"@s","objective":"ck.kill_player"},"color":"white"}]
+tellraw @s ["",{"text":"[GLOBAL] ","color":"gold"},{"text":"System: ","color":"gray"},{"score":{"name":"#ck","objective":"ck.system_on"},"color":"yellow"},{"text":" | Dev: ","color":"gray"},{"score":{"name":"#ck","objective":"ck.dev_mode"},"color":"yellow"}]
 
-# --- Tags ---
-tellraw @s [{"text":"[TAGS]  ","color":"green"},{"text":"ck.cursed: ","color":"gray"},{"selector":"@s[tag=ck.cursed]","color":"green"},{"text":"  ck.on_cooldown: ","color":"gray"},{"selector":"@s[tag=ck.on_cooldown]","color":"yellow"},{"text":"  ck.season_free: ","color":"gray"},{"selector":"@s[tag=ck.season_free]","color":"light_purple"}]
-tellraw @s [{"text":"[TAGS]  ","color":"green"},{"text":"ck.soul_cleansing: ","color":"gray"},{"selector":"@s[tag=ck.soul_cleansing]","color":"yellow"}]
-tellraw @s [{"text":"[TAGS]  ","color":"green"},{"text":"Tier tags: ","color":"gray"},{"selector":"@s[tag=ck.tier1]","color":"white"},{"text":" ","color":"white"},{"selector":"@s[tag=ck.tier2]","color":"white"},{"text":" ","color":"white"},{"selector":"@s[tag=ck.tier3]","color":"white"}]
-tellraw @s [{"text":"[TAGS]  ","color":"green"},{"text":"Curse tags (1-5): ","color":"gray"},{"selector":"@s[tag=ck.curse_1]","color":"red"},{"text":" ","color":"white"},{"selector":"@s[tag=ck.curse_2]","color":"red"},{"text":" ","color":"white"},{"selector":"@s[tag=ck.curse_3]","color":"red"},{"text":" ","color":"white"},{"selector":"@s[tag=ck.curse_4]","color":"red"},{"text":" ","color":"white"},{"selector":"@s[tag=ck.curse_5]","color":"red"}]
-tellraw @s [{"text":"[TAGS]  ","color":"green"},{"text":"Curse tags (6-10): ","color":"gray"},{"selector":"@s[tag=ck.curse_6]","color":"red"},{"text":" ","color":"white"},{"selector":"@s[tag=ck.curse_7]","color":"red"},{"text":" ","color":"white"},{"selector":"@s[tag=ck.curse_8]","color":"red"},{"text":" ","color":"white"},{"selector":"@s[tag=ck.curse_9]","color":"red"},{"text":" ","color":"white"},{"selector":"@s[tag=ck.curse_10]","color":"red"}]
-tellraw @s [{"text":"[TAGS]  ","color":"green"},{"text":"Curse tags (11-16): ","color":"gray"},{"selector":"@s[tag=ck.curse_11]","color":"red"},{"text":" ","color":"white"},{"selector":"@s[tag=ck.curse_12]","color":"red"},{"text":" ","color":"white"},{"selector":"@s[tag=ck.curse_13]","color":"red"},{"text":" ","color":"white"},{"selector":"@s[tag=ck.curse_14]","color":"red"},{"text":" ","color":"white"},{"selector":"@s[tag=ck.curse_15]","color":"red"},{"text":" ","color":"white"},{"selector":"@s[tag=ck.curse_16]","color":"red"}]
-tellraw @s [{"text":"[TAGS]  ","color":"green"},{"text":"ck.grave_sleeping: ","color":"gray"},{"selector":"@s[tag=ck.grave_sleeping]","color":"yellow"},{"text":"  ck.debt_dying: ","color":"gray"},{"selector":"@s[tag=ck.debt_dying]","color":"yellow"}]
+# --- Curse roster ---
+# Temporarily add cursed players to team for red color, then remove
+execute as @a[tag=ck.curse_1] run team join ck_cursed @s
+tellraw @s ["",{"text":"[1] ","color":"yellow"},{"text":"Bone Debt: ","color":"gray"},{"selector":"@a[tag=ck.curse_1]"}]
+execute as @a[tag=ck.curse_1] run team leave @s
 
-tellraw @s ["",{"text":"--- ","color":"dark_gray"},{"text":"End of Status","color":"dark_gray"},{"text":" ---","color":"dark_gray"}]
+execute as @a[tag=ck.curse_2] run team join ck_cursed @s
+tellraw @s ["",{"text":"[2] ","color":"yellow"},{"text":"Frail Vessel: ","color":"gray"},{"selector":"@a[tag=ck.curse_2]"}]
+execute as @a[tag=ck.curse_2] run team leave @s
+
+execute as @a[tag=ck.curse_3] run team join ck_cursed @s
+tellraw @s ["",{"text":"[3] ","color":"yellow"},{"text":"Nether Sickness: ","color":"gray"},{"selector":"@a[tag=ck.curse_3]"}]
+execute as @a[tag=ck.curse_3] run team leave @s
+
+execute as @a[tag=ck.curse_4] run team join ck_cursed @s
+tellraw @s ["",{"text":"[4] ","color":"yellow"},{"text":"Bloodless: ","color":"gray"},{"selector":"@a[tag=ck.curse_4]"}]
+execute as @a[tag=ck.curse_4] run team leave @s
+
+execute as @a[tag=ck.curse_5] run team join ck_cursed @s
+tellraw @s ["",{"text":"[5] ","color":"yellow"},{"text":"Ender Blockade: ","color":"gray"},{"selector":"@a[tag=ck.curse_5]"}]
+execute as @a[tag=ck.curse_5] run team leave @s
+
+execute as @a[tag=ck.curse_6] run team join ck_cursed @s
+tellraw @s ["",{"text":"[6] ","color":"yellow"},{"text":"Sluggish: ","color":"gray"},{"selector":"@a[tag=ck.curse_6]"}]
+execute as @a[tag=ck.curse_6] run team leave @s
+
+execute as @a[tag=ck.curse_7] run team join ck_cursed @s
+tellraw @s ["",{"text":"[7] ","color":"yellow"},{"text":"Soul Drain: ","color":"gray"},{"selector":"@a[tag=ck.curse_7]"}]
+execute as @a[tag=ck.curse_7] run team leave @s
+
+execute as @a[tag=ck.curse_8] run team join ck_cursed @s
+tellraw @s ["",{"text":"[8] ","color":"yellow"},{"text":"Villager's Bane: ","color":"gray"},{"selector":"@a[tag=ck.curse_8]"}]
+execute as @a[tag=ck.curse_8] run team leave @s
+
+execute as @a[tag=ck.curse_9] run team join ck_cursed @s
+tellraw @s ["",{"text":"[9] ","color":"yellow"},{"text":"Bee Marked: ","color":"gray"},{"selector":"@a[tag=ck.curse_9]"}]
+execute as @a[tag=ck.curse_9] run team leave @s
+
+execute as @a[tag=ck.curse_10] run team join ck_cursed @s
+tellraw @s ["",{"text":"[10] ","color":"yellow"},{"text":"Vampirism: ","color":"gray"},{"selector":"@a[tag=ck.curse_10]"}]
+execute as @a[tag=ck.curse_10] run team leave @s
+
+execute as @a[tag=ck.curse_11] run team join ck_cursed @s
+tellraw @s ["",{"text":"[11] ","color":"yellow"},{"text":"Arachnophobia: ","color":"gray"},{"selector":"@a[tag=ck.curse_11]"}]
+execute as @a[tag=ck.curse_11] run team leave @s
+
+execute as @a[tag=ck.curse_12] run team join ck_cursed @s
+tellraw @s ["",{"text":"[12] ","color":"yellow"},{"text":"Rootbound: ","color":"gray"},{"selector":"@a[tag=ck.curse_12]"}]
+execute as @a[tag=ck.curse_12] run team leave @s
+
+execute as @a[tag=ck.curse_13] run team join ck_cursed @s
+tellraw @s ["",{"text":"[13] ","color":"yellow"},{"text":"Grave Pact: ","color":"gray"},{"selector":"@a[tag=ck.curse_13]"}]
+execute as @a[tag=ck.curse_13] run team leave @s
+
+execute as @a[tag=ck.curse_14] run team join ck_cursed @s
+tellraw @s ["",{"text":"[14] ","color":"yellow"},{"text":"Landlocked: ","color":"gray"},{"selector":"@a[tag=ck.curse_14]"}]
+execute as @a[tag=ck.curse_14] run team leave @s
+
+execute as @a[tag=ck.curse_15] run team join ck_cursed @s
+tellraw @s ["",{"text":"[15] ","color":"yellow"},{"text":"Moonbound: ","color":"gray"},{"selector":"@a[tag=ck.curse_15]"}]
+execute as @a[tag=ck.curse_15] run team leave @s
+
+execute as @a[tag=ck.curse_16] run team join ck_cursed @s
+tellraw @s ["",{"text":"[16] ","color":"yellow"},{"text":"Soul Debt: ","color":"gray"},{"selector":"@a[tag=ck.curse_16]"}]
+execute as @a[tag=ck.curse_16] run team leave @s
+
+execute as @a[tag=ck.curse_17] run team join ck_cursed @s
+tellraw @s ["",{"text":"[17] ","color":"yellow"},{"text":"Echo Marked: ","color":"gray"},{"selector":"@a[tag=ck.curse_17]"}]
+execute as @a[tag=ck.curse_17] run team leave @s
+
+execute as @a[tag=ck.curse_18] run team join ck_cursed @s
+tellraw @s ["",{"text":"[18] ","color":"yellow"},{"text":"Campfire Cough: ","color":"gray"},{"selector":"@a[tag=ck.curse_18]"}]
+execute as @a[tag=ck.curse_18] run team leave @s
+
+execute as @a[tag=ck.curse_19] run team join ck_cursed @s
+tellraw @s ["",{"text":"[19] ","color":"yellow"},{"text":"Picky Eater: ","color":"gray"},{"selector":"@a[tag=ck.curse_19]"}]
+execute as @a[tag=ck.curse_19] run team leave @s
+
+execute as @a[tag=ck.curse_20] run team join ck_cursed @s
+tellraw @s ["",{"text":"[20] ","color":"yellow"},{"text":"Heavy Plate: ","color":"gray"},{"selector":"@a[tag=ck.curse_20]"}]
+execute as @a[tag=ck.curse_20] run team leave @s
+
+# --- Cooldown roster ---
+execute as @a[tag=ck.on_cooldown,tag=!ck.cursed] run team join ck_cursed @s
+tellraw @s ["",{"text":"[CD] ","color":"aqua"},{"text":"On cooldown: ","color":"gray"},{"selector":"@a[tag=ck.on_cooldown,tag=!ck.cursed]"}]
+execute as @a[tag=ck.on_cooldown,tag=!ck.cursed] run team leave @s
+
+# --- Free / clean ---
+tellraw @s ["",{"text":"[OK] ","color":"green"},{"text":"Clean: ","color":"gray"},{"selector":"@a[tag=!ck.cursed,tag=!ck.on_cooldown,tag=!ck.season_free]"}]
+tellraw @s ["",{"text":"[SF] ","color":"light_purple"},{"text":"Season free: ","color":"gray"},{"selector":"@a[tag=ck.season_free]"}]
+
+tellraw @s ["",{"text":"--- ","color":"dark_gray"},{"text":"End","color":"dark_gray"},{"text":" ---","color":"dark_gray"}]

@@ -1,6 +1,6 @@
 # Runs as the cursed player who entered the End
 # Teleport to overworld spawn
-execute in minecraft:overworld run tp @s 3211 70 -566
+execute in minecraft:overworld run tp @s -45 70 10
 
 # Warn the player
 title @s actionbar {"text":"☠ The End is forbidden to you ☠","color":"dark_purple","bold":true}

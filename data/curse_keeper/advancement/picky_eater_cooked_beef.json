@@ -1,0 +1,15 @@
+{
+  "criteria": {
+    "eat_steak": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": ["minecraft:cooked_beef"]
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "curse_keeper:tick/enforce/picky_eater_foods/picky_eater_cooked_beef"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "criteria": {
+    "eat_cooked_porkchop": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": ["minecraft:cooked_porkchop"]
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "curse_keeper:tick/enforce/picky_eater_foods/picky_eater_cooked_porkchop"
+  }
+}
