@@ -54,6 +54,7 @@ scoreboard players set @s ck.picky_cake 0
 scoreboard players set @s ck.picky_cake_last 0
 
 effect give @s minecraft:darkness 2 1 false
+function curse_keeper:curse/assign/picky_eater_revoke
 
 tellraw @s [{"text":"\n☠ YOU HAVE BEEN CURSED ☠\n","color":"dark_purple","bold":true}]
 tellraw @s [{"text":"Curse: ","color":"gray"},{"text":"Picky Eater","color":"red","bold":true}]
