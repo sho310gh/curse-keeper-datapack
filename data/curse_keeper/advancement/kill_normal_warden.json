@@ -1,18 +1,13 @@
 {
-    "criteria": {
-      "kill_normal_warden": {
-        "trigger": "minecraft:player_killed_entity",
-        "conditions": {
-          "entity": [
-            {
-              "condition": "minecraft:reference",
-              "name": "curse_keeper:is_normal_warden"
-            }
-          ]
-        }
+  "criteria": {
+    "kill_normal_warden": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": "curse_keeper:is_normal_warden"
       }
-    },
-    "rewards": {
-      "function": "curse_keeper:curse/echo_marked_reward_kill_warden"
     }
+  },
+  "rewards": {
+    "function": "curse_keeper:curse/echo_marked_reward_kill_warden"
   }
+}
